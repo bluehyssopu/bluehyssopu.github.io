@@ -1,249 +1,412 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>客怎眠qvq - 某菜鸟的小屋</title><meta name="author" content="客怎眠qvq"><meta name="copyright" content="客怎眠qvq"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="三年学说话，一生学闭嘴">
+<meta property="og:type" content="website">
+<meta property="og:title" content="客怎眠qvq">
+<meta property="og:url" content="http://bluehyssopu.github.io/index.html">
+<meta property="og:site_name" content="客怎眠qvq">
+<meta property="og:description" content="三年学说话，一生学闭嘴">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/bluehyssopu/storepicgo/raw/master/img/202203211719356.png">
+<meta property="article:author" content="客怎眠qvq">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/bluehyssopu/storepicgo/raw/master/img/202203211719356.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://bluehyssopu.github.io/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: {"appId":"9JF8FN3HA4","apiKey":"ba313bc99e599979bc2fb550c03e3ea9","indexName":"butterfly","hits":{"per_page":6},"languages":{"input_placeholder":"搜索文章","hits_empty":"找不到您查询的内容：${query}","hits_stats":"找到 ${hits} 条结果，用时 ${time} 毫秒"}},
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":100,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":200},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '客怎眠qvq',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-03-22 21:37:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
   
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
     
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
-
-  
-  
-<link rel="stylesheet" href="/css/style.css">
-
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-<meta name="generator" content="Hexo 6.1.0"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-My-New-Post" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/03/22/My-New-Post/" class="article-date">
-  <time class="dt-published" datetime="2022-03-22T10:05:52.000Z" itemprop="datePublished">2022-03-22</time>
-</a>
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/03/22/My-New-Post/">My New Post</a>
-    </h1>
-  
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom@1.0.0.css"><meta name="generator" content="Hexo 6.1.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://gitee.com/bluehyssopu/storepicgo/raw/master/img/202203211719356.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 杂项</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/view/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></li><li><a class="site-page child" href="/notes/"><i class="fa-fw fas fa-book"></i><span> 随笔</span></a></li><li><a class="site-page child" href="/bb/"><i class="fa-fw fas fa-heartbeat"></i><span> 心路</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">客怎眠qvq</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 杂项</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/view/"><i class="fa-fw fas fa-images"></i><span> 图库</span></a></li><li><a class="site-page child" href="/notes/"><i class="fa-fw fas fa-book"></i><span> 随笔</span></a></li><li><a class="site-page child" href="/bb/"><i class="fa-fw fas fa-heartbeat"></i><span> 心路</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2022/03/20/CsBooksOfUPC/" title="CsBooksOfUPC"><img class="post_bg" src="/../img/CsBooksOfUPC/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CsBooksOfUPC"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/03/20/CsBooksOfUPC/" title="CsBooksOfUPC">CsBooksOfUPC</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-20T05:56:11.000Z" title="发表于 2022-03-20 13:56:11">2022-03-20</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-20T10:01:18.819Z" title="更新于 2022-03-20 18:01:18">2022-03-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%99%E6%9D%90/">教材</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%99%E6%9D%90/">教材</a></span></div><div class="content">前言
+本篇博客用于提供帝国男子石油高中各专业课的书籍图片，方便各位大学僧在新学期购买旧书，或寻找对应的电子版，减少日常开销。
+本文件用于存储 计算机学院的专业教材封面，大类学科相同课程 会放在第一个表格内，选修课同理。
+封面
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/22/My-New-Post/" data-id="cl11z1ovt0000gcv09le132it" data-title="My New Post" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/03/22/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2022-03-22T09:55:50.327Z" itemprop="datePublished">2022-03-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2022/03/22/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/03/22/hello-world/" data-id="cl11yqpsi00002kv092hmdghh" data-title="Hello World" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/03/22/My-New-Post/">My New Post</a>
-          </li>
-        
-          <li>
-            <a href="/2022/03/22/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 John Doe<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.4.1.min.js"></script>
-
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+计算机科学与技术
 
 
 
 
-<script src="/js/script.js"></script>
+课程名
+教材名称
+教材封面
 
 
 
 
+离散数学
+离散数学（古天龙 常亮版）
 
-  </div>
-</body>
-</html>
+
+
+数据库原理
+数据库系统概论（第五版）
+
+
+
+计算机网络原理
+计算机网络（第八版 谢希仁）
+
+
+
+编译原理
+编译原理（第三版）
+
+
+
+计算机图形学
+计算机图形学
+
+
+
+计算方法
+计算方法第二版
+
+
+
+软件工程
+软件工程导论
+
+
+
+数字逻辑电路
+数字电子技术基础（第六版）
+
+
+
+计算机组成原理
+计算机组成与系统结构（袁春凤）或 计算机组成原理（郑秋梅）视任课老师而定
+
+
+
+人工智能
+人工智能导论
+
+
+
+数据结构与算法
+数据结构（陈越）
+
+
+
+计算机操作系统
+计算机操作系统原理（张琼声）
+
+
+
+程序设计（JAVA）
+JAVA2 实用教程
+
+
+
+数学实验
+数学实验（富媒体）
+
+
+
+Web应用开发
+PHP Web应用开发
+
+
+
+数字图像处理
+图像处理和分析教程（第二版 ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/01/29/%E6%96%B0%E5%B9%B4%E8%B4%BA%E8%AF%8D%E5%88%86%E6%9E%90/" title="新年贺词分析"><img class="post_bg" src="/../img/%E6%96%B0%E5%B9%B4%E8%B4%BA%E8%AF%8D%E5%88%86%E6%9E%90/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="新年贺词分析"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/29/%E6%96%B0%E5%B9%B4%E8%B4%BA%E8%AF%8D%E5%88%86%E6%9E%90/" title="新年贺词分析">新年贺词分析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-29T07:24:20.000Z" title="发表于 2022-01-29 15:24:20">2022-01-29</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-22T10:59:32.108Z" title="更新于 2022-03-22 18:59:32">2022-03-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Python/">Python</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Python/">Python</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E7%88%AC%E8%99%AB/">爬虫</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/jieba%E5%88%86%E8%AF%8D/">jieba分词</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E8%AF%8D%E4%BA%91/">词云</a></span></div><div class="content">前言
+快过年了，想起高中时每年语文老师都会朗读习近平主席的金句名言，以开阔同学们的眼界、猜测高考热点。想到这，心里感慨万千。最近也在复习爬虫的相关知识，于是爬取了三篇习大大的新年贺词，统计词频并生成词云，关注一波近年来我国的热点。
+测试环境： Python3.6、win10
+第三方库：requests、beautifulsoup、re、WordCloud等
+问题分析
+爬虫部分
+我们需要爬取习大大近三年的新年贺词，这里选择央广网
+
+近三年来，网站的内容均在类名为article-body的div盒子下，且均为p标签（只有2022年的文章内容给予p标签样式，不通用）
+
+利用soup确定文本位置，将三篇贺词写入text.txt，我们便完成了爬虫部分
+12345678910111213141516def getHtml(url, head):    r = requests.get(url, headers=head, timeout=30)    r.raise_for_status()    r.encoding = &quot;GBK&quot;    print(&quot;网页请求成功 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/01/25/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%82%AE/" title="每日一邮"><img class="post_bg" src="/../img/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%82%AE/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每日一邮"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/25/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%82%AE/" title="每日一邮">每日一邮</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-25T09:19:22.000Z" title="发表于 2022-01-25 17:19:22">2022-01-25</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-22T12:32:55.950Z" title="更新于 2022-03-22 20:32:55">2022-03-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Python/">Python</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Python/">Python</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/Email/">Email</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E8%88%94%E7%8B%97%E6%97%A5%E8%AE%B0/">舔狗日记</a></span></div><div class="content">前言
+最近在CSDN上发现许多使用Python自动发送邮件追女神的整活博客，于是想顺手做一个每天定时发送邮件给朋友的程序，内容包括舔狗日记、每天的天气变化、及人文问候。
+注意
+
+
+测试环境： win10 python3.6
+
+
+第三方库 requests、yagmail、lxml
+
+
+使用yagmail需要开通个人发送邮箱的SMTP服务，以QQ邮箱为例：
+
+
+
+如果xdm需要发送给多人（懂的都懂），可以使用代码最后的注释块，当然天气的内容仅适用于同地区的人，异地你舔不到……
+
+
+可以添加更多的内容，如土味情话等；也可以打包为.exe，在服务器上每天定时运行。
+
+
+代码
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384import requestsfrom lxml import etreeimport yagmail#  ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/01/22/%E5%9B%BE%E5%BD%A2%E5%AD%A6%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C/" title="图形学上机实验"><img class="post_bg" src="/../img/%E5%9B%BE%E5%BD%A2%E5%AD%A6%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图形学上机实验"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/22/%E5%9B%BE%E5%BD%A2%E5%AD%A6%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C/" title="图形学上机实验">图形学上机实验</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-22T06:45:21.000Z" title="发表于 2022-01-22 14:45:21">2022-01-22</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-22T13:05:23.407Z" title="更新于 2022-03-22 21:05:23">2022-03-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/OpenGL/">OpenGL</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/C/">C++</a></span></div><div class="content">实验环境：win10、VS 2017、OPenGL库
+实验一 基于OpenGL的二维图形绘制
+要求
+编程实现绘制一个五角星(基于OpenGL)，效果如下图所示
+ 
+问题分析
+可以将一个五角星划分为10个三角形，假设五角星的各边长，分别计算出10个定点的坐标，然后逐个绘制三角形，将其拼接为五角星；
+ 
+也可以利用参数方程，如下图所示，设大圆和小圆的半径分别为R、r，已知夹角为37度，在循环中计算绘制三角形。
+ 
+代码
+ProjectOne.cpp
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210310410510610710810911011111211311411511611711811912012112212312412512612712 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/01/21/%E5%8F%AF%E8%A7%81%E5%85%89%E6%B3%A2%E8%B0%B1%E5%9B%BE%E7%BB%98%E5%88%B6/" title="可见光波谱图绘制"><img class="post_bg" src="/../img/%E5%8F%AF%E8%A7%81%E5%85%89%E8%B0%B1%E5%B8%A6%E7%BB%98%E5%88%B6/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="可见光波谱图绘制"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/21/%E5%8F%AF%E8%A7%81%E5%85%89%E6%B3%A2%E8%B0%B1%E5%9B%BE%E7%BB%98%E5%88%B6/" title="可见光波谱图绘制">可见光波谱图绘制</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-21T06:32:12.000Z" title="发表于 2022-01-21 14:32:12">2022-01-21</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-22T12:45:42.282Z" title="更新于 2022-03-22 20:45:42">2022-03-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">数字图像处理</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Python/">Python</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">数字图像处理</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E6%B3%A2%E8%B0%B1%E5%9B%BE%E7%BB%98%E5%88%B6/">波谱图绘制</a></span></div><div class="content">问题
+下图是可见光的波谱，编写程序绘制该图像。
+
+分析
+根据下图公式，计算各段波长的颜色，保存在列表中。遍历每种颜色，利用matplotlib.pyplot依次绘制线段并填满区间，打表出结果。
+
+
+代码
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263import numpy as npimport matplotlib.pyplot as pltdef CIE_RGB():    rgb = np.zeros([1000,1000,3])    r = np.arange(0,1,0.001)    r,g = np.meshgrid(r,r)    rgb[:,:,0] = r    rgb[:,:,1] = g    rgb[:,:,2] = 1-r-g    over = rgb[:,:,2]&lt;0    rgb[over,:]=[1,1,1]    #将色品转化成RGB    maxVal ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2022/01/21/%E7%A9%BA%E5%9F%9F%E5%A2%9E%E5%BC%BA/" title="空域增强"><img class="post_bg" src="/../img/%E7%A9%BA%E5%9F%9F%E5%A2%9E%E5%BC%BA/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="空域增强"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/21/%E7%A9%BA%E5%9F%9F%E5%A2%9E%E5%BC%BA/" title="空域增强">空域增强</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-21T05:23:53.000Z" title="发表于 2022-01-21 13:23:53">2022-01-21</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-22T12:42:09.324Z" title="更新于 2022-03-22 20:42:09">2022-03-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">数字图像处理</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Python/">Python</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">数字图像处理</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E7%A9%BA%E5%9F%9F%E5%A2%9E%E5%BC%BA/">空域增强</a></span></div><div class="content">问题
+利用所学知识，实现如下图像的变换
+ 
+分析
+图片所示为空域增强实例——骨骼扫描图像，用于检测骨骼感染等疾病
+问题的目的是突出骨骼的边缘和细节变化部分，但是图片的灰度动态范围较窄，并且有很高的噪声，难于使用单一方法进行增强。若使用直方图均衡化，由于图片本身灰度动态范围较窄，再均衡化则灰度更少，效果不好；左图并非低对比度图像，具有高低亮度的信息，单纯使用对数变换或伽马变换也不合适，目的并非压制高亮度。只有强化边缘和细节之后，才能调整亮度，所以要组合多种变换。
+具体操作过程如下：
+ 
+ 
+文字解释为：原图像A 经过拉普拉斯变换（二阶微分）得到图像B；图像A、B相加得到锐化后的图像C；
+图像A经过sobel梯度处理（一阶微分）得到图像D；图像D经过平滑处理(3x3 或 5x5的滤波器)得到图像E；
+图像C和图像E进行乘法变换得到图像F；图A和图F进行求和得到图像G；图像G进行幂律变换，最终的到结果。
+分别使用Laplace和Sobel的原因是：在强化的同时，要抑制噪声Laplace对平滑部分噪声突显要强于梯度算子。梯度算子对边缘（灰度斜坡和台阶）平均响应高于laplace算子，对噪声等腰 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2022/01/05/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E6%B5%8B%E9%AA%8C%E9%A2%98/" title="数字图像处理测验题"><img class="post_bg" src="/../img/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E6%B5%8B%E9%AA%8C%E9%A2%98/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数字图像处理测验题"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/05/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E6%B5%8B%E9%AA%8C%E9%A2%98/" title="数字图像处理测验题">数字图像处理测验题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-01-05T08:22:20.000Z" title="发表于 2022-01-05 16:22:20">2022-01-05</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-22T11:09:37.388Z" title="更新于 2022-03-22 19:09:37">2022-03-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">数字图像处理</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">数字图像处理</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E6%B5%8B%E9%AA%8C%E9%A2%98/">测验题</a></span></div><div class="content">第一章
+选择题
+
+
+彩色图像中，记录的是对应空间点处的（）
+A. 能量值
+==B. RGB值==
+C. 光强值
+D. 索引值
+
+
+数字图像处理对应的英语术语是（ ）。
+A. Image Processing
+B. Computer Image Processing
+==C. Digital Image Processing==
+D. Computer Vision
+
+
+广义数字图像处理分成（ ）。
+==A. 中级处理==
+==B. 高级处理==
+==C. 低级处理==
+D. 混合处理
+
+
+下列选项中，（ ）是上机加分项。
+A. 完成上机作业基本功能
+B. 使用matlab完成上机作业
+==C. 使用opencv完成上机作业==
+==D. “零”起点完成上机作业==
+
+
+根据信息来源分，数字图像由（ ）形成的。
+==A. X射线成像
+B. 微波波段成像
+C. 紫外波段成像
+D. γ射线成像==
+
+
+数字图像按照图像表现形式分成二值图像、灰度图像、（）。
+A. 连续图像
+==B. 彩色图像==
+C. 合成图像
+==D. 索引图像==
+
+
+判断题答案须用（ ）标明。示例：我是题干内容。（ ） ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/11/07/Python-%E6%95%A3%E7%82%B9%E5%9B%BE/" title="散点图"><img class="post_bg" src="/../img/Python-%E6%95%A3%E7%82%B9%E5%9B%BE/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="散点图"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/11/07/Python-%E6%95%A3%E7%82%B9%E5%9B%BE/" title="散点图">散点图</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-11-07T06:17:55.000Z" title="发表于 2021-11-07 14:17:55">2021-11-07</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-22T12:37:15.938Z" title="更新于 2022-03-22 20:37:15">2022-03-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Python/">Python</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%95%A3%E7%82%B9%E5%9B%BE/">散点图</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/Python/">Python</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">数据处理</a></span></div><div class="content">前言
+源数据是一个data.txt
+某憨憨用的matlab，不会导出为xls、csv等pandas库可以处理的文件，我对你很无语……
+12xlswrite(&#x27;test.csv&#x27;)csvwrite(&#x27;test.csv&#x27;)
+操作步骤
+转换为csv文件后，会得到如下的一个表格；
+
+读取数据
+如果直接读取data.txt的话，可以使用如下代码：
+12import pandas as pddf = pd.read_table(&#x27;data2010.txt&#x27;, names=[&#x27;time&#x27;, &#x27;test&#x27;,&#x27;formal&#x27;, &#x27;color&#x27;], header=None, sep=&quot; &quot;) 
+
+如果是在test.csv的基础上操作，可使用如下代码：
+1df = pd.read_csv(&#x27;test.csv&#x27;)
+
+需求分析
+
+需要计算标准数据与实际测量数据的偏差（bias）、均方根误差（RMSE）、散射指数（SI）三个值
+
+
+
+
+ ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2021/10/23/colortrans/" title="颜色传输"><img class="post_bg" src="/../img/ColorTrans/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="颜色传输"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/10/23/colortrans/" title="颜色传输">颜色传输</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-10-23T07:59:30.000Z" title="发表于 2021-10-23 15:59:30">2021-10-23</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-22T11:01:32.636Z" title="更新于 2022-03-22 19:01:32">2022-03-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">数字图像处理</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Python/">Python</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">数字图像处理</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/%E9%A2%9C%E8%89%B2%E4%BC%A0%E9%80%92/">颜色传递</a></span></div><div class="content">问题
+
+上图是一幅红色树林的图像，左下图是一个蔬菜的图像。
+目标：将蔬菜图像的颜色组成换成树林图像的颜色组成。
+要求：通过算法完成两个图像之间颜色的映射。
+分析
+下述出自论文**《图像处理中的颜色传递算法_李雅娜》**：
+原文链接：图像处理中的颜色传递算法 - 中国知网 (cnki.net)
+由于目前图像采用的颜色空间主要为 RGB 空间，但 RGB 颜色空间的各分量之间存在着相关性，这就意味着如果改变一个像素颜色外观的话，必须改变所有的颜色通道，这使得颜色更改过程变得极为复杂。而后 Ruderman 等人基于人类视觉对图像数据的感知研究，提出了lαβ 颜色空间，与 RGB 及其他颜色空间不同的是在 lαβ 颜色空间中通道间数据的相关性最小，从而可在不同的通道独立地进行统计信息的传递。
+查阅论文，得知
+
+故，我们需要的操作如下：
+
+
+把源图片和目标图片由RGB转换为Lab颜色空间
+
+
+分别两个计算各个通道的均值和方差，假设s_mean、t_mean、s_std、s_std 分别为源图像和目标图像Lab下某一通道的均值和方差
+
+
+对源图像的每一通道的每个像素点作运算（设p为对应像素值）： ...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/2021/10/06/tools2/" title="实用工具集合-2"><img class="post_bg" src="/../img/Tools2/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="实用工具集合-2"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/10/06/tools2/" title="实用工具集合-2">实用工具集合-2</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-10-06T11:58:21.000Z" title="发表于 2021-10-06 19:58:21">2021-10-06</time><span class="article-meta-separator">|</span><i class="fas fa-history"></i><span class="article-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-03-22T12:56:29.724Z" title="更新于 2022-03-22 20:56:29">2022-03-22</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">实用工具</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/">小工具</a><span class="article-meta-link">•</span><a class="article-meta__tags" href="/tags/Tools/">Tools</a></span></div><div class="content">前言
+一篇收集实用工具或网站的博客
+工具集合
+Wox + Everything
+http://www.wox.one/
+https://www.voidtools.com/zh-cn/
+在Windows平台下，使用Wox+Everything组合工具，可以使你的办公效率提高许多倍，不仅提高了自己在编辑PPT、完成论文时文件的查找效率，甚至可以快速打开网页链接或者翻译。按下Alt+空格 打开高效办公的大门
+
+
+安装及使用方法见CSDN一位博主的博客，链接如下：
+https://blog.csdn.net/DoSmall/article/details/104878432
+Mathpix Snipping Tool
+一款好用的公式编辑神器，在写论文时，不懂latex公式的人可谓直接裂开，这款公式编辑器可以快速识别公式，并且提供latex和word的对应公式转换，十分的方便快捷。
+链接：https://mathpix.com/
+
+在官网上选择对应的版本，下载安装，注册账户后，便可以使用。免费版每月可以免费使用50次。
+使用软件界面的截图工具截取所需公式：
+
+软件便会自动识别，提供对应的公式， ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://gitee.com/bluehyssopu/storepicgo/raw/master/img/202203211719356.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">客怎眠qvq</div><div class="author-info__description">三年学说话，一生学闭嘴</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">20</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/bluehyssopu"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/bluehyssopu" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1767807919@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/03/20/CsBooksOfUPC/" title="CsBooksOfUPC"><img src="/../img/CsBooksOfUPC/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CsBooksOfUPC"/></a><div class="content"><a class="title" href="/2022/03/20/CsBooksOfUPC/" title="CsBooksOfUPC">CsBooksOfUPC</a><time datetime="2022-03-20T05:56:11.000Z" title="发表于 2022-03-20 13:56:11">2022-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/29/%E6%96%B0%E5%B9%B4%E8%B4%BA%E8%AF%8D%E5%88%86%E6%9E%90/" title="新年贺词分析"><img src="/../img/%E6%96%B0%E5%B9%B4%E8%B4%BA%E8%AF%8D%E5%88%86%E6%9E%90/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="新年贺词分析"/></a><div class="content"><a class="title" href="/2022/01/29/%E6%96%B0%E5%B9%B4%E8%B4%BA%E8%AF%8D%E5%88%86%E6%9E%90/" title="新年贺词分析">新年贺词分析</a><time datetime="2022-01-29T07:24:20.000Z" title="发表于 2022-01-29 15:24:20">2022-01-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/25/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%82%AE/" title="每日一邮"><img src="/../img/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%82%AE/cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="每日一邮"/></a><div class="content"><a class="title" href="/2022/01/25/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%82%AE/" title="每日一邮">每日一邮</a><time datetime="2022-01-25T09:19:22.000Z" title="发表于 2022-01-25 17:19:22">2022-01-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/22/%E5%9B%BE%E5%BD%A2%E5%AD%A6%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C/" title="图形学上机实验"><img src="/../img/%E5%9B%BE%E5%BD%A2%E5%AD%A6%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图形学上机实验"/></a><div class="content"><a class="title" href="/2022/01/22/%E5%9B%BE%E5%BD%A2%E5%AD%A6%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C/" title="图形学上机实验">图形学上机实验</a><time datetime="2022-01-22T06:45:21.000Z" title="发表于 2022-01-22 14:45:21">2022-01-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/01/21/%E5%8F%AF%E8%A7%81%E5%85%89%E6%B3%A2%E8%B0%B1%E5%9B%BE%E7%BB%98%E5%88%B6/" title="可见光波谱图绘制"><img src="/../img/%E5%8F%AF%E8%A7%81%E5%85%89%E8%B0%B1%E5%B8%A6%E7%BB%98%E5%88%B6/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="可见光波谱图绘制"/></a><div class="content"><a class="title" href="/2022/01/21/%E5%8F%AF%E8%A7%81%E5%85%89%E6%B3%A2%E8%B0%B1%E5%9B%BE%E7%BB%98%E5%88%B6/" title="可见光波谱图绘制">可见光波谱图绘制</a><time datetime="2022-01-21T06:32:12.000Z" title="发表于 2022-01-21 14:32:12">2022-01-21</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Python/"><span class="card-category-list-name">Python</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"><span class="card-category-list-name">实用工具</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%99%E6%9D%90/"><span class="card-category-list-name">教材</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"><span class="card-category-list-name">数字图像处理</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"><span class="card-category-list-name">计算机图形学</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E6%95%99%E6%9D%90/" style="font-size: 1.15em; color: rgb(35, 44, 172)">教材</a><a href="/tags/%E6%95%A3%E7%82%B9%E5%9B%BE/" style="font-size: 1.15em; color: rgb(27, 5, 49)">散点图</a><a href="/tags/Python/" style="font-size: 1.45em; color: rgb(8, 155, 74)">Python</a><a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" style="font-size: 1.15em; color: rgb(95, 37, 16)">数据处理</a><a href="/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/" style="font-size: 1.35em; color: rgb(8, 5, 40)">数字图像处理</a><a href="/tags/%E9%A2%9C%E8%89%B2%E4%BC%A0%E9%80%92/" style="font-size: 1.15em; color: rgb(52, 164, 93)">颜色传递</a><a href="/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/" style="font-size: 1.25em; color: rgb(144, 157, 18)">小工具</a><a href="/tags/Tools/" style="font-size: 1.25em; color: rgb(7, 25, 64)">Tools</a><a href="/tags/%E6%B3%A2%E8%B0%B1%E5%9B%BE%E7%BB%98%E5%88%B6/" style="font-size: 1.15em; color: rgb(106, 148, 99)">波谱图绘制</a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.15em; color: rgb(70, 14, 122)">爬虫</a><a href="/tags/jieba%E5%88%86%E8%AF%8D/" style="font-size: 1.15em; color: rgb(58, 143, 136)">jieba分词</a><a href="/tags/%E8%AF%8D%E4%BA%91/" style="font-size: 1.15em; color: rgb(73, 135, 60)">词云</a><a href="/tags/%E6%96%B0%E9%97%BB%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB/" style="font-size: 1.15em; color: rgb(18, 189, 3)">新闻文本分类</a><a href="/tags/Email/" style="font-size: 1.15em; color: rgb(176, 50, 16)">Email</a><a href="/tags/%E8%88%94%E7%8B%97%E6%97%A5%E8%AE%B0/" style="font-size: 1.15em; color: rgb(14, 192, 58)">舔狗日记</a><a href="/tags/%E7%A9%BA%E5%9F%9F%E5%A2%9E%E5%BC%BA/" style="font-size: 1.15em; color: rgb(26, 44, 179)">空域增强</a><a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/" style="font-size: 1.15em; color: rgb(0, 32, 159)">计算机图形学</a><a href="/tags/OpenGL/" style="font-size: 1.15em; color: rgb(63, 19, 38)">OpenGL</a><a href="/tags/C/" style="font-size: 1.15em; color: rgb(105, 157, 74)">C++</a><a href="/tags/%E6%B5%8B%E9%AA%8C%E9%A2%98/" style="font-size: 1.15em; color: rgb(138, 121, 76)">测验题</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/03/"><span class="card-archive-list-date">三月 2022</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/01/"><span class="card-archive-list-date">一月 2022</span><span class="card-archive-list-count">6</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/11/"><span class="card-archive-list-date">十一月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/10/"><span class="card-archive-list-date">十月 2021</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/09/"><span class="card-archive-list-date">九月 2021</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/08/"><span class="card-archive-list-date">八月 2021</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">12</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2021-03-17T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2022-03-22T13:37:41.263Z"></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2022 By 客怎眠qvq</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="algolia-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Algolia</span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="search-wrap"><div id="algolia-search-input"></div><hr/><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4/dist/instantsearch.production.min.js"></script><script src="/js/search/algolia.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="50" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "https://kzmqvq.netlify.app/*"
+  to = "https://www.kzmqvq.com/:splat"
+  force = true

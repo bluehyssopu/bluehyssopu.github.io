@@ -120,12 +120,12 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 }
 
 body {
-    cursor: url('https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur'),
+    cursor: url('https://gcore.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur'),
         default;
 }
 a,
 img {
-    cursor: url('https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur'),
+    cursor: url('https://gcore.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur'),
         default;
 }
 

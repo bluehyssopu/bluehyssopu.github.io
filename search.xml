@@ -462,72 +462,6 @@
       </tags>
   </entry>
   <entry>
-    <title>实用工具集合-1</title>
-    <url>/posts/ee10a716.html</url>
-    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
-<p>一篇收集实用工具或网站的博客</p>
-<h2 id="网站集合"><a class="markdownIt-Anchor" href="#网站集合"></a> 网站集合</h2>
-<h3 id="bigjpg"><a class="markdownIt-Anchor" href="#bigjpg"></a> Bigjpg</h3>
-<p><a href="https://bigjpg.com/zh">https://bigjpg.com/zh</a></p>
-<p>学生狗每到考试周免不了查阅各种文献以完成期末的大作业，网络上的许多图片或多或少存在噪点，在论文中出现影响论文的美观性。</p>
-<p>该网站使用最新人工智能深度学习技术——深度卷积神经网络。它会将噪点和锯齿的部分进行补充，实现图片的无损放大。</p>
-<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/Hh2cLutBj6zgv1o.png">
-<table>
-<thead>
-<tr>
-<th style="text-align:left">处理前</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><img src = "https://s2.loli.net/2022/03/25/SyUPsH1tWeIq8ZG.jpg"    ></td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>处理后</strong></td>
-</tr>
-<tr>
-<td style="text-align:left"><img src = "https://s2.loli.net/2022/03/25/QugXafNzjvO5KSm.jpg"    ></td>
-</tr>
-</tbody>
-</table>
-<h3 id="慢慢买"><a class="markdownIt-Anchor" href="#慢慢买"></a> 慢慢买</h3>
-<p><a href="http://www.manmanbuy.com/">http://www.manmanbuy.com/</a></p>
-<p>学生狗想买键盘，但是预算有限，怎样才能在短时间内得到合适的键盘入手价格？</p>
-<p>以京东静音红轴为例</p>
-<img src = "https://s2.loli.net/2022/03/25/VaeubhT1G5RsHkS.png">
-<p>只需要复制商品的链接至查询页面，进行历史价格的查询</p>
-<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/ATeNgtxsz6DnwKF.png">
-<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/u4Hz6GLUTKpyf8N.png">
-<p>点击最低值查看，近期便可以在349的低价位入手了。</p>
-<h3 id="图书互助"><a class="markdownIt-Anchor" href="#图书互助"></a> 图书互助</h3>
-<p><a href="https://www.readersteam.com/">https://www.readersteam.com/</a></p>
-<p>大学僧每学期免不了购买许多专业书籍，不仅又厚又重，不便携带，而且<strong>花 销 巨 大</strong>。</p>
-<p>有电脑或者平板的可以考虑查询课本的电子版，不仅方便，还能节约一部分开支去<s>搭MC服务器</s>恰69折的海底捞。</p>
-<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/NH5jkGUD41OsEJ2.png">
-<p>在搜索栏输入所需要的的书本名或者作者</p>
-<img src = "https://s2.loli.net/2022/03/25/K69iFt7Clv48ueW.png">
-<p>找到所需要的的书籍，支付一定金额即可获取</p>
-<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/WhRvCqdB8zfVDm3.png">
-<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/lbA5fSHG1idLcUY.png">
-<p>或者可以参考网站的第二种查找方式，安装对应的油猴脚本后，在图书馆联盟中搜寻，如果该书存在资源，那么书籍的下方便会显示对应的图书互助编号，点击即可进入支付页面获取</p>
-<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/3onUSCWNKu9E7cJ.png">
-<h3 id="樱花动漫"><a class="markdownIt-Anchor" href="#樱花动漫"></a> 樱花动漫</h3>
-<p><a href="https://www.meixixx.com/">https://www.meixixx.com/</a></p>
-<p>域名不唯一，始终在变化，但是网站上的动漫资源全部都是高清无损的（斗罗大陆、斗破苍穹、罗小黑等）。如果网站挂了，在浏览器重新搜一下就好。</p>
-<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/l15vH6VjoTmcwsG.png">
-<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/zrMBsfwbSD1Jjqd.png">
-<p><s>充会员？不可能的</s>我穷，买不起会员 但这并不能阻止我快乐的脚步</p>
-<p>习惯了用魔法上油管的xdm，可以直接在油管上搜索动漫。我也不知道什么原因，鹅厂的动漫在油管上都免费，国内最新一集都收费。</p>
-]]></content>
-      <categories>
-        <category>实用工具</category>
-      </categories>
-      <tags>
-        <tag>小工具</tag>
-        <tag>Tools</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>颜色传输</title>
     <url>/posts/7271227.html</url>
     <content><![CDATA[<h2 id="问题"><a class="markdownIt-Anchor" href="#问题"></a> 问题</h2>
@@ -591,6 +525,72 @@
         <tag>Python</tag>
         <tag>数字图像处理</tag>
         <tag>颜色传递</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>实用工具集合-1</title>
+    <url>/posts/ee10a716.html</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>一篇收集实用工具或网站的博客</p>
+<h2 id="网站集合"><a class="markdownIt-Anchor" href="#网站集合"></a> 网站集合</h2>
+<h3 id="bigjpg"><a class="markdownIt-Anchor" href="#bigjpg"></a> Bigjpg</h3>
+<p><a href="https://bigjpg.com/zh">https://bigjpg.com/zh</a></p>
+<p>学生狗每到考试周免不了查阅各种文献以完成期末的大作业，网络上的许多图片或多或少存在噪点，在论文中出现影响论文的美观性。</p>
+<p>该网站使用最新人工智能深度学习技术——深度卷积神经网络。它会将噪点和锯齿的部分进行补充，实现图片的无损放大。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/Hh2cLutBj6zgv1o.png">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">处理前</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><img src = "https://s2.loli.net/2022/03/25/SyUPsH1tWeIq8ZG.jpg"    ></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>处理后</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><img src = "https://s2.loli.net/2022/03/25/QugXafNzjvO5KSm.jpg"    ></td>
+</tr>
+</tbody>
+</table>
+<h3 id="慢慢买"><a class="markdownIt-Anchor" href="#慢慢买"></a> 慢慢买</h3>
+<p><a href="http://www.manmanbuy.com/">http://www.manmanbuy.com/</a></p>
+<p>学生狗想买键盘，但是预算有限，怎样才能在短时间内得到合适的键盘入手价格？</p>
+<p>以京东静音红轴为例</p>
+<img src = "https://s2.loli.net/2022/03/25/VaeubhT1G5RsHkS.png">
+<p>只需要复制商品的链接至查询页面，进行历史价格的查询</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/ATeNgtxsz6DnwKF.png">
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/u4Hz6GLUTKpyf8N.png">
+<p>点击最低值查看，近期便可以在349的低价位入手了。</p>
+<h3 id="图书互助"><a class="markdownIt-Anchor" href="#图书互助"></a> 图书互助</h3>
+<p><a href="https://www.readersteam.com/">https://www.readersteam.com/</a></p>
+<p>大学僧每学期免不了购买许多专业书籍，不仅又厚又重，不便携带，而且<strong>花 销 巨 大</strong>。</p>
+<p>有电脑或者平板的可以考虑查询课本的电子版，不仅方便，还能节约一部分开支去<s>搭MC服务器</s>恰69折的海底捞。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/NH5jkGUD41OsEJ2.png">
+<p>在搜索栏输入所需要的的书本名或者作者</p>
+<img src = "https://s2.loli.net/2022/03/25/K69iFt7Clv48ueW.png">
+<p>找到所需要的的书籍，支付一定金额即可获取</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/WhRvCqdB8zfVDm3.png">
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/lbA5fSHG1idLcUY.png">
+<p>或者可以参考网站的第二种查找方式，安装对应的油猴脚本后，在图书馆联盟中搜寻，如果该书存在资源，那么书籍的下方便会显示对应的图书互助编号，点击即可进入支付页面获取</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/3onUSCWNKu9E7cJ.png">
+<h3 id="樱花动漫"><a class="markdownIt-Anchor" href="#樱花动漫"></a> 樱花动漫</h3>
+<p><a href="https://www.meixixx.com/">https://www.meixixx.com/</a></p>
+<p>域名不唯一，始终在变化，但是网站上的动漫资源全部都是高清无损的（斗罗大陆、斗破苍穹、罗小黑等）。如果网站挂了，在浏览器重新搜一下就好。</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/l15vH6VjoTmcwsG.png">
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/03/25/zrMBsfwbSD1Jjqd.png">
+<p><s>充会员？不可能的</s>我穷，买不起会员 但这并不能阻止我快乐的脚步</p>
+<p>习惯了用魔法上油管的xdm，可以直接在油管上搜索动漫。我也不知道什么原因，鹅厂的动漫在油管上都免费，国内最新一集都收费。</p>
+]]></content>
+      <categories>
+        <category>实用工具</category>
+      </categories>
+      <tags>
+        <tag>小工具</tag>
+        <tag>Tools</tag>
       </tags>
   </entry>
   <entry>

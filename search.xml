@@ -1777,6 +1777,7 @@
 ]]></content>
       <categories>
         <category>Web</category>
+        <category>Html</category>
       </categories>
       <tags>
         <tag>Web</tag>
@@ -2966,6 +2967,60 @@ B. 错</p>
       <tags>
         <tag>数字图像处理</tag>
         <tag>测验题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue面试题-01</title>
+    <url>/posts/a3e1ba6c.html</url>
+    <content><![CDATA[<h2 id="webpack-和-vite对比"><a class="markdownIt-Anchor" href="#webpack-和-vite对比"></a> Webpack 和 Vite对比</h2>
+<blockquote>
+<p>vite凭什么比webpack快</p>
+</blockquote>
+<p><strong>webpack启动需要打包</strong></p>
+<p><code>webpack dev serve</code>在启动时，会把所有的包都<code>build</code>一遍，从入口文件起索引整个项目的文件，编译成一个或多个js文件，不管模块是否被执行，都会被打包到bundler里。随着项目的复杂程度上升，模块增加，打包后的bundler也会越来越大，打包速度会越来越<strong>慢</strong>。即项目越复杂，启动时间越来越长。</p>
+<p><strong>Vite在启动时不需要打包，不需要拆分模块的依赖，不需要编译，启动速度非常快。</strong></p>
+<p>由于现代浏览器本身就支持ES Module，会自动向依赖的Module发出请求。vite充分利用这一点，将开发环境下的模块文件，就作为浏览器要执行的文件，而不是像webpack那样进行打包合并。</p>
+<p><strong>vite 请求哪个模块再对该模块进行实时编译 webpack全部编译</strong></p>
+<p>当浏览器请求某个模块时，再根据需要对模块内容进行编译。这种按需动态编译的方式，极大的缩减了编译时间，项目越复杂、模块越多，vite的优势越明显。 在HMR方面，当改动了一个模块后，仅需让浏览器重新请求该模块即可，不像webpack那样需要把该模块的相关依赖模块全部编译一次，效率更高。 当需要打包到生产环境时，vite使用传统的rollup进行打包，因此，vite的主要优势在开发阶段。另外，由于vite利用的是ES Module，因此在代码中不可以使用CommonJS</p>
+<p><strong>在底层实现上</strong>，vite是基于esbuild预构建的，esbuild使用go语言编写，比js编写的打包器预构建快10-100倍，js的操作一般是毫秒级，但go达到了纳秒级</p>
+<p>参考链接：</p>
+<p><a href="https://segmentfault.com/a/1190000016984434">Webpack原理与实践（一）：打包流程</a></p>
+<p><a href="https://blog.csdn.net/weixin_40906515/article/details/114313102">Vite 和Webpack 的核心差异</a></p>
+<p><a href="https://juejin.cn/post/6893699833425559559">vite和webpack的区别</a></p>
+<h2 id="v-if-和-v-show的区别"><a class="markdownIt-Anchor" href="#v-if-和-v-show的区别"></a> v-if 和 v-show的区别</h2>
+<p>首先，<code>v-show</code> 只是 CSS 级别的 <code>display: none;</code> 和 <code>display: block;</code> 之间的切换，而 <code>v-if</code> 决定是否会选择代码块的内容（或组件）。</p>
+<p>当需要非常频繁地切换时，使用 <code>v-show</code>；一次性渲染完（运行时条件很少改变），使用 <code>v-if</code>。</p>
+<p><strong>使用 <code>v-if</code> 在性能优化上有什么经验？</strong></p>
+<p>因为当 <code>v-if=&quot;false&quot;</code> 时，内部组件是不会渲染的，所以在特定条件才渲染部分组件（或内容）时，可以先将条件设置为 <code>false</code>，需要时（或异步，比如 $nextTick）再设置为 <code>true</code>，这样可以优先渲染重要的其它内容，合理利用，可以进行性能优化。</p>
+<blockquote>
+<p><code>v-if</code> 是“真正”的条件渲染，因为它会确保在切换过程中，条件块内的事件监听器和子组件适当地被销毁和重建。<code>v-if</code> 也是<strong>惰性的</strong>：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。</p>
+<p>相比之下，<code>v-show</code> 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。</p>
+<p>一般来说，<code>v-if</code> 有更高的切换开销，而 <code>v-show</code> 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 <code>v-show</code> 较好；如果在运行时条件很少改变，则使用 <code>v-if</code> 较好。</p>
+<p>当 <code>v-if</code> 与 <code>v-for</code> 一起使用时，<code>v-if</code> 具有比 <code>v-for</code> 更高的优先级。不推荐v-if和v-for一起使用</p>
+</blockquote>
+<p>参考链接：</p>
+<p><a href="https://v3.cn.vuejs.org/guide/conditional.html#v-show">vue3中文文档—v-if vs v-show</a></p>
+<h2 id="绑定-class-的数组用法"><a class="markdownIt-Anchor" href="#绑定-class-的数组用法"></a> 绑定 class 的数组用法</h2>
+<p>首先是基本的对象用法，传给 <code>:class</code> (<code>v-bind:class</code> 的简写) 一个对象，以动态地切换 class：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">:class</span>=<span class="string">&quot;&#123;show: isShow&#125;&quot;</span>&gt;</span>内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">    data () &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="attr">isShow</span>: <span class="literal">true</span></span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>我们也可以在这里绑定一个返回对象的<strong>计算属性</strong>。这是一个常用且强大的模式：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">:class</span>=<span class="string">&quot;classObject&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="title function_">data</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">isActive</span>: <span class="literal">true</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">error</span>: <span class="literal">null</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">activeClass</span>: <span class="string">&#x27;active&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">errorClass</span>: <span class="string">&#x27;text-danger&#x27;</span></span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">&#125;,</span></span><br><span class="line"><span class="language-javascript"><span class="attr">computed</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="title function_">classObject</span>(<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="attr">active</span>: <span class="variable language_">this</span>.<span class="property">isActive</span> &amp;&amp; !<span class="variable language_">this</span>.<span class="property">error</span>,</span></span><br><span class="line"><span class="language-javascript">      <span class="string">&#x27;text-danger&#x27;</span>: <span class="variable language_">this</span>.<span class="property">error</span> &amp;&amp; <span class="variable language_">this</span>.<span class="property">error</span>.<span class="property">type</span> === <span class="string">&#x27;fatal&#x27;</span></span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript">&#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>绑定 class 的对象用法能满足大部分业务需求，不过，在复杂的场景下，会用到<strong>数组</strong>，数组中可以有对象、三元表达式</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">:class</span>=<span class="string">&quot;[activeClass, errorClass]&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">// 数组中有对象</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">:class</span>=<span class="string">&quot;[&#123; active: isActive &#125;, errorClass]&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">// 数组中可以有三元表达式</span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">:class</span>=<span class="string">&quot;[isActive ? activeClass : &#x27;&#x27;, errorClass]&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>下面给出一个更为复杂的例子，iView的Button组件，数组里，可以是固定的值，还有动态值（对象）的混合。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">:class</span>=<span class="string">&quot;classes&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">  <span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">computed</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">      classes () &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="keyword">return</span> [</span></span><br><span class="line"><span class="language-javascript">          <span class="string">`<span class="subst">$&#123;prefixCls&#125;</span>`</span>,</span></span><br><span class="line"><span class="language-javascript">          <span class="string">`<span class="subst">$&#123;prefixCls&#125;</span>-<span class="subst">$&#123;<span class="variable language_">this</span>.type&#125;</span>`</span>,</span></span><br><span class="line"><span class="language-javascript">          &#123;</span></span><br><span class="line"><span class="language-javascript">            [<span class="string">`<span class="subst">$&#123;prefixCls&#125;</span>-long`</span>]: <span class="variable language_">this</span>.<span class="property">long</span>,</span></span><br><span class="line"><span class="language-javascript">            [<span class="string">`<span class="subst">$&#123;prefixCls&#125;</span>-<span class="subst">$&#123;<span class="variable language_">this</span>.shape&#125;</span>`</span>]: !!<span class="variable language_">this</span>.<span class="property">shape</span>,</span></span><br><span class="line"><span class="language-javascript">            [<span class="string">`<span class="subst">$&#123;prefixCls&#125;</span>-<span class="subst">$&#123;<span class="variable language_">this</span>.size&#125;</span>`</span>]: <span class="variable language_">this</span>.<span class="property">size</span> !== <span class="string">&#x27;default&#x27;</span>,</span></span><br><span class="line"><span class="language-javascript">            [<span class="string">`<span class="subst">$&#123;prefixCls&#125;</span>-loading`</span>]: <span class="variable language_">this</span>.<span class="property">loading</span> != <span class="literal">null</span> &amp;&amp; <span class="variable language_">this</span>.<span class="property">loading</span>,</span></span><br><span class="line"><span class="language-javascript">            [<span class="string">`<span class="subst">$&#123;prefixCls&#125;</span>-icon-only`</span>]: !<span class="variable language_">this</span>.<span class="property">showSlot</span> &amp;&amp; (!!<span class="variable language_">this</span>.<span class="property">icon</span> || !!<span class="variable language_">this</span>.<span class="property">customIcon</span> || <span class="variable language_">this</span>.<span class="property">loading</span>),</span></span><br><span class="line"><span class="language-javascript">            [<span class="string">`<span class="subst">$&#123;prefixCls&#125;</span>-ghost`</span>]: <span class="variable language_">this</span>.<span class="property">ghost</span></span></span><br><span class="line"><span class="language-javascript">          &#125;</span></span><br><span class="line"><span class="language-javascript">        ];</span></span><br><span class="line"><span class="language-javascript">      &#125;</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript">  &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>参考链接：</p>
+<p><a href="https://v3.cn.vuejs.org/guide/class-and-style.html#%E5%AF%B9%E8%B1%A1%E8%AF%AD%E6%B3%95">vue3中文文档—class和style绑定</a></p>
+]]></content>
+      <categories>
+        <category>Web</category>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>Vue</tag>
+        <tag>面试题</tag>
+        <tag>基础知识</tag>
       </tags>
   </entry>
 </search>

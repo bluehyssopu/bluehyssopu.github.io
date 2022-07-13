@@ -8,6 +8,11 @@
     font-size: 1.1em
 }
 
+/* 文章目录无标号 */
+/* .sticky_layout .toc-content .toc-number {
+    display: none;
+} */
+
 /* 文章代码块 */
 @font-face {
     font-family: MyFont;

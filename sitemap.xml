@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.kzmqvq.com/posts/9bc3c82c.html</loc>
+    
+    <lastmod>2022-07-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.kzmqvq.com/posts/a3e1ba6c.html</loc>
     
-    <lastmod>2022-07-11</lastmod>
+    <lastmod>2022-07-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -634,6 +643,27 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://www.kzmqvq.com/tags/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/</loc>
+    <lastmod>2022-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kzmqvq.com/tags/%E5%A4%A7%E5%AD%A6/</loc>
+    <lastmod>2022-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kzmqvq.com/tags/%E5%BF%83%E6%80%81/</loc>
+    <lastmod>2022-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -715,6 +745,13 @@
   
   <url>
     <loc>https://www.kzmqvq.com/categories/Web/Vue/</loc>
+    <lastmod>2022-07-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kzmqvq.com/categories/%E8%83%A1%E8%A8%80%E4%B9%B1%E8%AF%AD/</loc>
     <lastmod>2022-07-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

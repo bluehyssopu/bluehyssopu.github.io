@@ -10,13 +10,13 @@
 }
 
 /* 文章图片阴影设置 */
-#article-container .articleImg img {
+/* #article-container .articleImg {
     max-width: 90%;
     margin: 1.5rem auto;
     display: block;
     box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-}
+} */
 
 /* 文章目录无标号 */
 /* .sticky_layout .toc-content .toc-number {
@@ -44,11 +44,6 @@
 @font-face {
     font-family: MyFont;
     src: url(https://gcore.jsdelivr.net/npm/kang-static/Hexo/font/woff2/JetBrainsMono-Medium.woff2)
-}
-
-@font-face {
-    font-family: iconfont;
-    src: url(//at.alicdn.com/t/font_3402931_k7wduyne5s.woff2?t=1652625245211) format("woff2"), url(//at.alicdn.com/t/font_3402931_k7wduyne5s.woff?t=1652625245211) format("woff"), url(//at.alicdn.com/t/font_3402931_k7wduyne5s.ttf?t=1652625245211) format("truetype")
 }
 
 #article-container code,

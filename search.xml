@@ -94,6 +94,65 @@
       </tags>
   </entry>
   <entry>
+    <title>Vue面试题-02</title>
+    <url>/posts/479daafb.html</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>马上要秋招了，搜集整理了一些Vue面试题，包括组件、指令、API等相关内容，巩固基础😎秋招冲冲冲！！！本篇包括：</p>
+<p>✅计算属性和侦听器的区别</p>
+<h2 id="计算属性和侦听器的区别"><a class="markdownIt-Anchor" href="#计算属性和侦听器的区别"></a> 计算属性和侦听器的区别</h2>
+<p>计算属性(<code>computed</code>)是自动监听依赖值的变化，从而动态返回内容(动态显示新的计算结果)。</p>
+<p>监听(<code>watch</code>)是一个过程，在监听的值变化时，可以触发一个回调，并做一些事情。回调函数有两个参数，一个 <code>val</code> （修改后的 <code>data</code>数据），一个 <code>oldVal</code>（原来的 data 数据）。Vue 实例将会在实例化时调用<code>$watch()</code>，遍历 <code>watch</code>对象的每一个属性。</p>
+<p>两者用于不同情况下完成计算，显示数据的操作。它们的区别主要来源于用法，只是需要动态值，那就用计算属性；需要知道值的改变后执行业务逻辑，才用 <code>watch</code>，用反或混用虽然可行，但都是不正确的用法。</p>
+<p>下面给出这两个特性的基本用法：</p>
+<p><strong>计算属性</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span> &#123;&#123;total&#125;&#125; <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">var</span> vm = <span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">el</span>: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">num</span>: <span class="number">10</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">price</span>: <span class="number">8.8</span>,</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">computed</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">total</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">num</span> * <span class="variable language_">this</span>.<span class="property">price</span>;</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">&#125;);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>侦听器</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span>  &#123;&#123;total&#125;&#125;  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="keyword">var</span> vm = <span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">el</span>: <span class="string">&quot;#app&quot;</span>,</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">data</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">num</span>: <span class="number">10</span>,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">price</span>: <span class="number">8.8</span>,</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">  <span class="attr">watch</span>: &#123;</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">num</span>: <span class="keyword">function</span> (<span class="params">val</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">this</span>.<span class="property">total</span> = val * <span class="variable language_">this</span>.<span class="property">price</span>;</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">    <span class="attr">price</span>: <span class="keyword">function</span> (<span class="params">val</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">      <span class="variable language_">this</span>.<span class="property">total</span> = <span class="variable language_">this</span>.<span class="property">num</span> * val;</span></span><br><span class="line"><span class="language-javascript">    &#125;,</span></span><br><span class="line"><span class="language-javascript">  &#125;,</span></span><br><span class="line"><span class="language-javascript">&#125;);</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>结合代码进行说明：</p>
+<ol>
+<li>
+<p>计算属性的应用场景是计算的内容需要依赖<strong>多个属性</strong>(num、price)的情况；侦听器的应用场景是计算的内容依赖<strong>一个属性</strong>(仅num发生变化、仅price发生变化)的情况</p>
+</li>
+<li>
+<p>计算属性缓存结果时<strong>每次都会重新创建变量</strong>，而侦听器是<strong>直接计算</strong>，不会创建变量保存结果。也就意味着，<strong>数据如果会反复的发生变化，计算很多次的情况下，计算属性的开销将会更大</strong>，也就意味着这种情况不适合使用计算属性，适合使用侦听器。如果一个数据反复会被使用，但是它计算依赖的内容很少发生变化的情况下，计算属性会<strong>缓存</strong>结果，就更加适合这种情况。</p>
+</li>
+</ol>
+<blockquote>
+<p>如果 this.num 或者 this.price 没有发生变化，直接获取缓存的总结88作为计算属性的结果。<br />
+如果 this.num 或者 this.price 任何一项发生了变化，那么就会重新计算并得到一个总结结果，并重新将结果进行缓存。</p>
+</blockquote>
+<ol start="3">
+<li>
+<p><code>computed</code> 的结果是通过return返回的，而 <code>watch</code> 不需要return。</p>
+</li>
+<li>
+<p><code>watch</code> 中的参数可以得到侦听属性改变的最新结果，而<code>computed</code>函数没有这种参数。</p>
+</li>
+</ol>
+<p>补充：</p>
+<ul>
+<li><code>computed</code>是一个对象时，有 <strong>get</strong> 和 <strong>set</strong> 两个选项。</li>
+<li><code>computed</code>与 <code>methods</code>相比：<code>methods</code> 是一个方法，它可以接受参数，而 <code>computed</code>不能；<code>computed</code>是可以<strong>缓存</strong>的，<code>methods</code> 不会；一般在 <code>v-for</code> 里，需要根据当前项动态绑定值时，只能用 <code>methods</code> 而不能用 <code>computed</code>，因为 <code>computed</code> 不能传参。</li>
+<li><code>computed</code> 可以依赖其它 <code>computed</code>，甚至是其它组件的数据(data)。</li>
+<li><code>watch</code>是一个对象时，常用的配置有：<code>handler</code>(执行的函数)、<code>deep</code>(是否深度)、<code>immediate</code>(是否立即执行)</li>
+<li><code>computed</code>默认深度依赖，<code>watch</code> 默认浅度观测</li>
+</ul>
+<p>参考链接：</p>
+<div class="tag link"><a class="link-card" title="Vue计算属性和watch的区别有哪些?" href="https://www.php.cn/vuejs/464220.html"><div class="left"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/link.png"/></div><div class="right"><p class="text">Vue计算属性和watch的区别有哪些?</p><p class="url">https://www.php.cn/vuejs/464220.html</p></div></a></div>
+<div class="tag link"><a class="link-card" title="计算属性(computed)和监听器(watch)的区别" href="https://blog.csdn.net/itcast_cs/article/details/102802310"><div class="left"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/link.png"/></div><div class="right"><p class="text">计算属性(computed)和监听器(watch)的区别</p><p class="url">https://blog.csdn.net/itcast_cs/article/details/102802310</p></div></a></div>
+]]></content>
+      <categories>
+        <category>Web</category>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Web</tag>
+        <tag>Vue</tag>
+        <tag>面试题</tag>
+        <tag>基础知识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>别拿高中的心态读大学</title>
     <url>/posts/9bc3c82c.html</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>

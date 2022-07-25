@@ -81,6 +81,10 @@
 <blockquote>
 <p>所有生命周期钩子的 <code>this</code> 上下文将自动绑定至实例中，因此你可以访问 data、computed 和 methods。这意味着<strong>你不应该使用箭头函数来定义一个生命周期方法</strong> (例如 <code>created: () =&gt; this.fetchTodos()</code>)。因为箭头函数绑定了父级上下文，所以 <code>this</code> 不会指向预期的组件实例，并且<code>this.fetchTodos</code> 将会是 undefined。</p>
 </blockquote>
+<h2 id="相关文章"><a class="markdownIt-Anchor" href="#相关文章"></a> 相关文章</h2>
+<ul>
+<li><a href="https://www.kzmqvq.com/posts/479daafb.html">vue面试题-02</a></li>
+</ul>
 ]]></content>
       <categories>
         <category>Web</category>
@@ -269,6 +273,10 @@
 <p>参考链接：</p>
 <div class="tag link"><a class="link-card" title="v-if和v-for哪个优先级更高" href="https://github.com/57code/vue-interview/blob/master/public/01-vif-vfor/README.md"><div class="left"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/link.png"/></div><div class="right"><p class="text">v-if和v-for哪个优先级更高</p><p class="url">https://github.com/57code/vue-interview/blob/master/public/01-vif-vfor/README.md</p></div></a></div>
 <div class="tag link"><a class="link-card" title="为什么Vue中的v-if和v-for不建议一起用?" href="https://vue3js.cn/interview/vue/if_for.html"><div class="left"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/link.png"/></div><div class="right"><p class="text">为什么Vue中的v-if和v-for不建议一起用?</p><p class="url">https://vue3js.cn/interview/vue/if_for.html</p></div></a></div>
+<h2 id="相关文章"><a class="markdownIt-Anchor" href="#相关文章"></a> 相关文章</h2>
+<ul>
+<li><a href="https://www.kzmqvq.com/posts/a3e1ba6c.html">vue面试题-01</a></li>
+</ul>
 ]]></content>
       <categories>
         <category>Web</category>
@@ -2097,8 +2105,8 @@
         <category>数字图像处理</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>数字图像处理</tag>
+        <tag>Python</tag>
         <tag>波谱图绘制</tag>
       </tags>
   </entry>
@@ -2129,8 +2137,8 @@
         <category>数字图像处理</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>数字图像处理</tag>
+        <tag>Python</tag>
         <tag>空域增强</tag>
       </tags>
   </entry>
@@ -2976,8 +2984,8 @@ B. 错</p>
         <category>Python</category>
       </categories>
       <tags>
-        <tag>散点图</tag>
         <tag>Python</tag>
+        <tag>散点图</tag>
         <tag>数据处理</tag>
       </tags>
   </entry>
@@ -3042,9 +3050,9 @@ B. 错</p>
         <category>数字图像处理</category>
       </categories>
       <tags>
-        <tag>Python</tag>
         <tag>数字图像处理</tag>
         <tag>颜色传递</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>

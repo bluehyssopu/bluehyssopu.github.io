@@ -102,7 +102,9 @@
     <url>/posts/309a9a6d.html</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
 <p>马上要秋招了，搜集整理了一些Vue面试题，包括组件、指令、API等相关内容，巩固基础😎秋招冲冲冲！！！本篇包括：</p>
-<p>✅keep-alive的理解</p>
+<p>✅keep-alive的理解<br />
+✅nextTick的理解<br />
+✅vue组件之间的通信方式</p>
 <h2 id="keep-alive的理解"><a class="markdownIt-Anchor" href="#keep-alive的理解"></a> keep-alive的理解</h2>
 <ul>
 <li>
@@ -158,6 +160,51 @@
 <div class="tag link"><a class="link-card" title="nextTick实现原理" href="https://zhuanlan.zhihu.com/p/195531049"><div class="left"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/link.png"/></div><div class="right"><p class="text">nextTick实现原理</p><p class="url">https://zhuanlan.zhihu.com/p/195531049</p></div></a></div>
 <div class="tag link"><a class="link-card" title="实例方法$nextTick" href="https://v3.cn.vuejs.org/api/instance-methods.html#nexttick"><div class="left"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/link.png"/></div><div class="right"><p class="text">实例方法$nextTick</p><p class="url">https://v3.cn.vuejs.org/api/instance-methods.html#nexttick</p></div></a></div>
 <div class="tag link"><a class="link-card" title="API-nextTick" href="https://v3.cn.vuejs.org/api/global-api.html#nexttick"><div class="left"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/link.png"/></div><div class="right"><p class="text">API-nextTick</p><p class="url">https://v3.cn.vuejs.org/api/global-api.html#nexttick</p></div></a></div>
+<h2 id="vue组件之间的通信方式"><a class="markdownIt-Anchor" href="#vue组件之间的通信方式"></a> vue组件之间的通信方式</h2>
+<ol>
+<li>组件通信方式大体有以下8种：</li>
+</ol>
+<ul>
+<li>props</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>m</mi><mi>i</mi><mi>t</mi><mi mathvariant="normal">/</mi></mrow><annotation encoding="application/x-tex">emit/</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord">/</span></span></span></span>on</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mi>h</mi><mi>i</mi><mi>l</mi><mi>d</mi><mi>r</mi><mi>e</mi><mi>n</mi><mi mathvariant="normal">/</mi></mrow><annotation encoding="application/x-tex">children/</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">d</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord">/</span></span></span></span>parent</li>
+<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>t</mi><mi>t</mi><mi>r</mi><mi>s</mi><mi mathvariant="normal">/</mi></mrow><annotation encoding="application/x-tex">attrs/</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">s</span><span class="mord">/</span></span></span></span>listeners</li>
+<li>ref</li>
+<li>$root</li>
+<li>eventbus</li>
+<li>vuex</li>
+</ul>
+<ol start="2">
+<li>根据组件之间关系讨论组件通信最为清晰有效</li>
+</ol>
+<ul>
+<li>父子组件
+<ul>
+<li><code>props</code></li>
+<li><code>$emit</code>/<code>$on</code></li>
+<li><code>$parent</code> / <code>$children</code></li>
+<li><code>ref</code></li>
+<li><code>$attrs</code> / <code>$listeners</code></li>
+</ul>
+</li>
+<li>兄弟组件
+<ul>
+<li><code>$parent</code></li>
+<li><code>eventbus</code></li>
+<li><code>vuex</code></li>
+</ul>
+</li>
+<li>跨层级关系
+<ul>
+<li><code>provide</code>/<code>inject</code></li>
+<li><code>$root</code></li>
+<li><code>eventbus</code></li>
+<li><code>vuex</code></li>
+</ul>
+</li>
+</ul>
+<p>搬运链接：</p>
+<div class="tag link"><a class="link-card" title="vue中组件之间的通信方式？" href="https://github.com/57code/vue-interview/blob/master/public/05-communication/README.md"><div class="left"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/link.png"/></div><div class="right"><p class="text">vue中组件之间的通信方式？</p><p class="url">https://github.com/57code/vue-interview/blob/master/public/05-communication/README.md</p></div></a></div>
 ]]></content>
       <categories>
         <category>Web</category>

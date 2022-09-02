@@ -6,7 +6,7 @@
   <link href="https://www.kzmqvq.com/atom.xml" rel="self"/>
   
   <link href="https://www.kzmqvq.com/"/>
-  <updated>2022-09-02T11:55:42.813Z</updated>
+  <updated>2022-09-02T15:29:40.473Z</updated>
   <id>https://www.kzmqvq.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【项目总结】vue3-shop-cms</title>
+    <link href="https://www.kzmqvq.com/posts/1b316398.html"/>
+    <id>https://www.kzmqvq.com/posts/1b316398.html</id>
+    <published>2022-09-02T12:27:28.000Z</published>
+    <updated>2022-09-02T15:29:40.473Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2><p>在完成基于 Vue3 和 TypeScript 的商城后台管理系统项目后，总结的学习笔记。项目原作者coderwhy</p><p><a href="https://github.com/bluehyssopu/vue3-shop-cms">项目地址</a> <a href="https://vue3admin.kzmqvq.com">在线演示</a></p><h2 id="知识点"><a class="markdownIt-Anchor" href="#知识点"></a> 知识点</h2><h3 id="表格时间格式化"><a class="markdownIt-Anchor" href="#表格时间格式化"></a> 表格时间格式化</h3><p>使用 Element-Plus 的表格组件时，用于规范用户管理的注册时间。将 <code>formatUtcString</code> 函数作为一个工具函数存放在<code>utils</code> 文件夹下，将其全局注册 <code>registerProperties</code>。</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> dayjs <span class="keyword">from</span> <span class="string">&#x27;dayjs&#x27;</span></span><br><span class="line"><span class="keyword">import</span> utc <span class="keyword">from</span> <span class="string">&#x27;dayjs/plugin/utc&#x27;</span></span><br><span class="line"></span><br><span class="line">dayjs.<span class="title function_">extend</span>(utc)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">DATE_TIME_FORMAT</span> = <span class="string">&#x27;YYYY-MM-DD HH:mm:ss&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">formatUtcString</span>(<span class="params"></span></span><br><span class="line"><span class="params">  utcString: <span class="built_in">string</span>,</span></span><br><span class="line"><span class="params">  format: <span class="built_in">string</span> = DATE_TIME_FORMAT</span></span><br><span class="line"><span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> dayjs.<span class="title function_">utc</span>(utcString).<span class="title function_">utcOffset</span>(<span class="number">8</span>).<span class="title function_">format</span>(format)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">App</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; formatUtcString &#125; <span class="keyword">from</span> <span class="string">&#x27;@/utils/date-format&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">function</span> <span class="title function_">registerProperties</span>(<span class="params">app: App</span>) &#123;</span><br><span class="line">  app.<span class="property">config</span>.<span class="property">globalProperties</span>.<span class="property">$filters</span> = &#123;</span><br><span class="line">    <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;foo&#x27;</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="title function_">formatTime</span>(<span class="params">value: <span class="built_in">string</span></span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="title function_">formatUtcString</span>(value)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>当使用表格组件时，借助列中的插槽进行 <code>formatTime</code> 处理</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;template #createAt=&quot;scope&quot;&gt;</span><br><span class="line">  &lt;span&gt;&#123;&#123; $filters.formatTime(scope.row.createAt) &#125;&#125;&lt;/span&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;template #updateAt=&quot;scope&quot;&gt;</span><br><span class="line">  &lt;span&gt;&#123;&#123; $filters.formatTime(scope.row.updateAt) &#125;&#125;&lt;/span&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">项目笔记，coderwhy老师的前端课程，基于 Vue3 和 TypeScript 的后台管理系统。</summary>
+    
+    
+    
+    <category term="项目总结" scheme="https://www.kzmqvq.com/categories/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="Vue3" scheme="https://www.kzmqvq.com/tags/Vue3/"/>
+    
+    <category term="项目总结" scheme="https://www.kzmqvq.com/tags/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="笔记" scheme="https://www.kzmqvq.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="后台管理系统" scheme="https://www.kzmqvq.com/tags/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>【demo50】背景图点击切换</title>
@@ -607,37 +634,6 @@
     <category term="随笔" scheme="https://www.kzmqvq.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
     <category term="2021" scheme="https://www.kzmqvq.com/tags/2021/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2020除夕祝福</title>
-    <link href="https://www.kzmqvq.com/posts/fabd8e26.html"/>
-    <id>https://www.kzmqvq.com/posts/fabd8e26.html</id>
-    <published>2022-04-02T11:40:33.000Z</published>
-    <updated>2022-04-22T11:52:52.023Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言 📢</h2><p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp本篇随笔初发于2020年除夕夜个人QQ空间，最近在整理过去的一些手稿，部署至博客上做记录。</p><h2 id="愿"><a class="markdownIt-Anchor" href="#愿"></a> 愿 📝</h2><center>愿每次雨掸霜叶都能掸落一片过往</center><center>愿每次风吹麦浪都能奔向理想远方</center><center>愿每次卿推开窗都能赏烟波浦江上</center><center>愿洛水不凉 老船不晃 人不惆怅</center> <p>&nbsp&nbsp</p><center>愿每缕人间烟火都能寻于庙堂之上</center><center>愿每寸极乐净土都能显于坊市之间</center><center>愿每道寒星微光都能散于江湖之侧</center><center>愿每个追梦之人都能站于高山之巅</center> <p>&nbsp</p><center>愿你酒尽歌终之后 衾被尚温</center><center>愿你月照花枝之时 呼吸尚稳</center><center>愿你他朝风雨之际 重门尚开</center><center>愿你人生聚散之前 故事尚可</center><center>愿你出走漂泊半生 归来仍现此间少年</center><center>虽未伏天 尚能照这三寸人间</center>  <p>&nbsp</p><center>愿你简单依旧 一本字帖仍能轻易上头</center><center>愿你快乐依旧 尽管拖延仍能轻松满足</center><center>愿你中二依旧 经历黑暗仍能坚信有光</center><center>做着那个愿苍生如龙 愿亡魂安息 愿此心光明的梦</center><center>愿你能够早日建立属于自己的伊甸园</center><center>愿你能够早日找到适合自己的塔帕斯</center><center>愿你能够早日获得忠于自己的贾维斯</center>  <p>&nbsp</p><center>最后</center><center>愿你所见如你所想 愿这盛世如你所愿</center><center>愿、愿……</center><br /><div class="note info flat"><p>文中许多措辞结合个人生活经历，引用许嵩歌词及看过的小说情节，如有侵权，请留言联系我删除。</p></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言 📢&lt;/h2&gt;
-&lt;p&gt;&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp&amp;nbsp本篇随笔初发于2020年除夕夜个人QQ空间，最近在整理过去</summary>
-      
-    
-    
-    
-    <category term="年度总结" scheme="https://www.kzmqvq.com/categories/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
-    
-    
-    <category term="年度总结" scheme="https://www.kzmqvq.com/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
-    
-    <category term="新年祝福" scheme="https://www.kzmqvq.com/tags/%E6%96%B0%E5%B9%B4%E7%A5%9D%E7%A6%8F/"/>
-    
-    <category term="2020" scheme="https://www.kzmqvq.com/tags/2020/"/>
-    
-    <category term="随笔" scheme="https://www.kzmqvq.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   

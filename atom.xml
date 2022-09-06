@@ -6,7 +6,7 @@
   <link href="https://www.kzmqvq.com/atom.xml" rel="self"/>
   
   <link href="https://www.kzmqvq.com/"/>
-  <updated>2022-09-05T13:31:17.507Z</updated>
+  <updated>2022-09-06T15:23:59.885Z</updated>
   <id>https://www.kzmqvq.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【项目总结】TypeScript基础</title>
+    <link href="https://www.kzmqvq.com/posts/1c5c8a7f.html"/>
+    <id>https://www.kzmqvq.com/posts/1c5c8a7f.html</id>
+    <published>2022-09-06T13:56:52.000Z</published>
+    <updated>2022-09-06T15:23:59.885Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2><p>本篇博客用于补充在商城后台管理系统中出现的 <code>TypeScript</code> 知识点。</p><h2 id="知识整理"><a class="markdownIt-Anchor" href="#知识整理"></a> 知识整理</h2><p><code>TypeScript</code>解决了<code>JavaScript</code>存在的很多设计缺陷，尤其是关于类型检测的。从开发者长远的角度来看，学习<code>TypeScript</code>有助于前端程序员培养 类型思维，这种思维方式对于完成大型项目尤为重要。个人用起来感觉很像<code>Java</code>。</p><h3 id="typescript的特点"><a class="markdownIt-Anchor" href="#typescript的特点"></a> TypeScript的特点</h3><ul><li>始于JavaScript，归于JavaScript</li><li>TypeScript是一个强大的工具，用于构建大型项目<ul><li>类型允许JavaScript开发者在开发JavaScript应用程序时，使用高效的开发工具和常用操作，比如<mark class="hl-label blue">静态检查</mark> 和<mark class="hl-label blue">代码重构</mark> </li><li>类型是可选的，类型推断让一些类型的注释使你的代码的静态验证有很大的不同。类型让你<mark class="hl-label green">定义软件组件之间的接口</mark> 和洞察现有JavaScript库的行为；</li></ul></li><li>拥有先进的 JavaScript<ul><li>TypeScript提供最新的和不断发展的JavaScript特性，包括那些来自2015年的ECMAScript和未来的提案中的特性，比如异步功能和Decorators，以帮助<mark class="hl-label green">建立健壮的组件</mark> ；</li><li>这些特性为高可信应用程序开发时是可用的，但是会被编译成简洁的ECMAScript3（或更新版本）的JavaScript；(<code>babel</code>编译器的使用)</li></ul></li></ul><h3 id="变量声明"><a class="markdownIt-Anchor" href="#变量声明"></a> 变量声明</h3><p>在TypeScript中定义变量需要指定 标识符 的类型。声明了类型后TypeScript就会进行<mark class="hl-label blue">类型检测</mark> ，声明的类型可以称之为类型注解； 比如我们声明一个message，完整的写法如下：</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="attr">message</span>: <span class="built_in">string</span> = <span class="string">&quot;Hello World&quot;</span></span><br></pre></td></tr></table></figure><p>如果我们在使用时赋值给<code>message</code>其他的类型，就会报错。</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">message1 = <span class="number">123</span> <span class="comment">// Type &#x27;message&#x27; is not assignable to type &#x27;string&#x27;</span></span><br></pre></td></tr></table></figure><p>在开发中，有时候为了方便起见我们并不会在声明每一个变量时都写上对应的数据类型，我们更希望可以通过TypeScript本身的特性帮助我们推断出对应的变量类型：</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> message = <span class="string">&quot;Hello World&quot;</span></span><br><span class="line"><span class="comment">// 在一个变量第一次赋值时，ts会根据后面的赋值内容的类型，来推断出变量的类型</span></span><br><span class="line">message = <span class="number">123</span> <span class="comment">// // Type &#x27;message&#x27; is not assignable to type &#x27;string&#x27;</span></span><br></pre></td></tr></table></figure><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://vip2.loli.io/2022/09/06/e3aUzHWPL5mN6uo.png" alt="ts与js的关系" /></p><h3 id="数据类型"><a class="markdownIt-Anchor" href="#数据类型"></a> 数据类型</h3><p><code>TypeScript</code>在<code>JavaScript</code>的基础上新增了一些数据类型。</p><p><strong>any类型</strong></p><p>在某些情况下，我们确实无法确定一个变量的类型，并且可能它会发生一些变化，这个时候我们可以使用any类型（类似于Dart语言中的dynamic类型）；</p><p>any类型有点像一种讨巧的TypeScript手段：我们可以对any类型的变量进行任何的操作，包括获取不存在的属性、方法；赋值任何的值，比如数字、字符串的值。偷懒时可以这么干qvq</p><p><strong>unknown类型</strong></p><p>unknown是TypeScript中比较特殊的一种类型，它用于描述类型不确定的变量。</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>): <span class="built_in">string</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&#x27;foo&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">bar</span>(<span class="params"></span>): <span class="built_in">number</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">123</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// unknown类型只能赋值给any和unknown类型</span></span><br><span class="line"><span class="comment">// any类型可以赋值给任意类型</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> flag = <span class="literal">true</span></span><br><span class="line"><span class="keyword">let</span> <span class="attr">result</span>: <span class="built_in">unknown</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (flag) &#123;</span><br><span class="line">  result = <span class="title function_">foo</span>()</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  result = <span class="title function_">bar</span>()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> result === <span class="string">&#x27;string&#x27;</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(result.<span class="property">length</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> &#123;&#125;</span><br></pre></td></tr></table></figure><p><strong>void类型</strong></p><p>void通常用来指定一个没有返回值的函数； 如果一个函数我们没有写任何类型，那么它默认返回值的类型就是void，我们也可以显示的来指定返回值是void：</p><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params">num1: <span class="built_in">number</span>, num2: <span class="built_in">number</span></span>): <span class="built_in">void</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(num1 + num2)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">sum</span>(<span class="params">num1: <span class="built_in">number</span>, num2: <span class="built_in">number</span></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(num1 + num2)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><strong>never类型</strong></p><p>never 表示永远不会发生值的类型，以一个函数为例：</p><ul><li>如果一个函数中是一个死循环或者抛出一个异常，那么这个函数会返回东西吗？</li><li>不会，那么写void类型或者其他类型作为返回值类型都不合适，我们就可以使用never类型；</li></ul><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>): <span class="built_in">never</span> &#123;</span><br><span class="line">  <span class="comment">// 死循环</span></span><br><span class="line">  <span class="keyword">while</span>(<span class="literal">true</span>) &#123;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;123&quot;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">bar</span>(<span class="params"></span>): <span class="built_in">never</span> &#123;</span><br><span class="line">  <span class="comment">// 抛出异常</span></span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">项目笔记，coderwhy老师的前端课程，补充TypeScript基础知识点。</summary>
+    
+    
+    
+    <category term="项目总结" scheme="https://www.kzmqvq.com/categories/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="Vue3" scheme="https://www.kzmqvq.com/tags/Vue3/"/>
+    
+    <category term="项目总结" scheme="https://www.kzmqvq.com/tags/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    
+    <category term="笔记" scheme="https://www.kzmqvq.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="后台管理系统" scheme="https://www.kzmqvq.com/tags/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="TypeScript" scheme="https://www.kzmqvq.com/tags/TypeScript/"/>
+    
+  </entry>
   
   <entry>
     <title>【项目总结】vue3-shop-cms</title>
@@ -598,42 +627,6 @@
     <category term="数据结构与算法" scheme="https://www.kzmqvq.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
     <category term="刷题日记" scheme="https://www.kzmqvq.com/tags/%E5%88%B7%E9%A2%98%E6%97%A5%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2022新年祝福</title>
-    <link href="https://www.kzmqvq.com/posts/dbbc679a.html"/>
-    <id>https://www.kzmqvq.com/posts/dbbc679a.html</id>
-    <published>2022-04-02T12:06:02.000Z</published>
-    <updated>2022-04-22T11:52:09.148Z</updated>
-    
-    <content type="html"><![CDATA[<style>.post p {    text-indent: 2rem;}</style><h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言 📢</h2><p>本篇随笔写于2021年除夕，首发于个人QQ空间，部分所用图片取自天行九歌动画、涂鸦王国等网图，如有侵权，请留言联系我删除。整理手稿ing</p><h2 id="也许"><a class="markdownIt-Anchor" href="#也许"></a> 也许 📝</h2><p>正值双十年华 总觉得该写点什么 可又感到无话可说 徘徊于此</p><p>时至今日 友历经三七岁月 生日快乐 我也有写一点东西的必要了</p><p>​    ——也许你会扔掉许多东西 但希望你不会丢掉自己 如果有一天我把自己弄丢了 记得来找我</p><p>未来充满了许多惊喜</p><p>你会遇到许多的人或事</p><p>也许是那桃树下 身着白衣 腰别酒葫 手握书卷的少年</p><p>也许是那古堡中 凭栏而立 睥睨北荒 皑皑血衣的侯爷</p><p>也许是那墙角边 爪没故苔 步履蹒跚 形色枯槁的忠犬</p><p>也许是那轮椅上 手按长弓 白发难歇 饮恨而亡的旧主</p><p>也许是那九州内 揭竿而起 醉战八方 未知始终的枭雄</p><p>    &nbsp;</p><p>也许是那市井间 博众人一笑的说书人 口若悬河 谈吐风骚</p><p>也许是那草丛里 趁射手不备的第六者 谋定后动 闪现绝杀</p><p>也许是那河泉畔 视荆棘草芥的小浣熊 细嗅蔷薇 隐而不发</p> <p>     &nbsp; </p><p>也许你会丢许多东西 或丢失 或丢弃</p><p>也许是土壳中随手掏出的一把方糖</p><p>也许是大树脚下悄悄探头的白菜梗和大番薯</p><p>也许是冰封王座旁浑身鲜血仍怀抱火种的休罗斯公爵</p><p>也许是静谧时分背靠大树只为守护夜色中那轮明月的孤寂身影</p><p>但总有些人 永远地定格在了那一年的记忆里</p> <p>&nbsp;</p><p>公子执羽扇 闲看暮雨萧萧</p><p>羊肠浸野草 不见函谷繁花</p><p>玖绝凝焦土 未映群星璀璨</p><p>红叶穷碧落  又访香山残雪</p><p>&nbsp;</p><p>你曾于初入世事时感慨自身的渺小</p><p>也曾怀揣着未闻花名时的意气风发</p><p>偶尔怀念在公式夹缝中写诗的枯燥生活</p><p>也曾邂逅在南方小城里氤氲的熟悉雾气</p><p>没准 你还能瞥见那个戴着渔夫帽的少年</p><p>或者 那个充满着青桔味的夏天……</p><p>&nbsp</p><p>当然 你会遇到许多头疼的难题</p><p>但还希望你不要轻易忘记</p><p>那些你勾过的奇怪曲线</p><p>那些你画过的粗糙相片</p><p>那些你做过的离谱习题</p><p>那些你看过的老巷黄昏</p><p>那些你听过的纸上风光</p><p>那些你刷过的脑残影剧</p><p>那些你躺过的专业科目</p><p>以及那些年 你喜欢的那群人</p><p>&nbsp</p><p>我记得 你还总爱画一些粗糙的相片</p><p>递给那夜里爱读诗的少年 多年以后</p><p>愿你还能在立秋 绘出属于自己的心拍数</p><p>愿你还能在莺飞时节 摇曳于那一片醉春花荫</p><p>愿你还能游过泡沫般的盛夏 拨动着轮轴般的年年</p><p>愿你在玉山琼林寻未归途的小鹿时 还有人提醒你看路</p><p>有时也会感慨 随你几分像？我想了又想 却又留住了谁的模样呢</p><p>白发戴花君莫笑 岁月从不败美人</p><p>愿新年 胜旧年</p> <img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://s2.loli.net/2022/04/02/TZOf7JBMmKWLqVc.jpg" width=300px><div class="note info flat"><p>原文长图(图文版)：<a href="https://cdn.jsdelivr.net/gh/bluehyssopu/storepicgo@latest/2021.png">https://cdn.jsdelivr.net/gh/bluehyssopu/storepicgo@latest/2021.png</a></p></div>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;style&gt;
-.post p {
-    text-indent: 2rem;
-}
-&lt;/style&gt;
-&lt;h2 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言 📢&lt;/h2&gt;
-&lt;p&gt;本篇随笔写于2021年除夕，首发于</summary>
-      
-    
-    
-    
-    <category term="年度总结" scheme="https://www.kzmqvq.com/categories/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
-    
-    
-    <category term="年度总结" scheme="https://www.kzmqvq.com/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
-    
-    <category term="新年祝福" scheme="https://www.kzmqvq.com/tags/%E6%96%B0%E5%B9%B4%E7%A5%9D%E7%A6%8F/"/>
-    
-    <category term="随笔" scheme="https://www.kzmqvq.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-    <category term="2021" scheme="https://www.kzmqvq.com/tags/2021/"/>
     
   </entry>
   

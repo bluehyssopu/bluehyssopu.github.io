@@ -128,6 +128,24 @@ pre[class*=language-] {
     opacity: .7
 }
 
+/* 侧边栏 */
+
+/* 关注按钮样式 */
+#aside-content .card-info #card-info-btn {
+  border-radius: 8px;
+}
+/* 文章导航 */
+#aside-content #card-toc .toc-content .toc-link.active {
+  font-weight: 700;
+  border-radius: 8px;
+  color: #fff;
+  border-left-color: #49b1f5;
+  background-color: #49b1f5;
+  box-shadow: 0 8px 12px -3px rgba(73,177,245,0.2);
+}
+
+/* 侧边栏结束 */
+
 /* 小风车颜色 */
 #content-inner.layout h1::before {
     color: #ef50a8;

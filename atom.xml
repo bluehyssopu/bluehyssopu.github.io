@@ -37,9 +37,9 @@
     
     <category term="Web" scheme="https://www.kzmqvq.com/tags/Web/"/>
     
-    <category term="JavaScript" scheme="https://www.kzmqvq.com/tags/JavaScript/"/>
-    
     <category term="前端" scheme="https://www.kzmqvq.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="JavaScript" scheme="https://www.kzmqvq.com/tags/JavaScript/"/>
     
     <category term="随手记" scheme="https://www.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
     
@@ -469,11 +469,11 @@
     
     <category term="中二病" scheme="https://www.kzmqvq.com/tags/%E4%B8%AD%E4%BA%8C%E7%97%85/"/>
     
-    <category term="少年歌行" scheme="https://www.kzmqvq.com/tags/%E5%B0%91%E5%B9%B4%E6%AD%8C%E8%A1%8C/"/>
-    
     <category term="小说" scheme="https://www.kzmqvq.com/tags/%E5%B0%8F%E8%AF%B4/"/>
     
     <category term="文摘" scheme="https://www.kzmqvq.com/tags/%E6%96%87%E6%91%98/"/>
+    
+    <category term="少年歌行" scheme="https://www.kzmqvq.com/tags/%E5%B0%91%E5%B9%B4%E6%AD%8C%E8%A1%8C/"/>
     
   </entry>
   
@@ -496,11 +496,11 @@
     
     <category term="中二病" scheme="https://www.kzmqvq.com/tags/%E4%B8%AD%E4%BA%8C%E7%97%85/"/>
     
+    <category term="剑来" scheme="https://www.kzmqvq.com/tags/%E5%89%91%E6%9D%A5/"/>
+    
     <category term="小说" scheme="https://www.kzmqvq.com/tags/%E5%B0%8F%E8%AF%B4/"/>
     
     <category term="文摘" scheme="https://www.kzmqvq.com/tags/%E6%96%87%E6%91%98/"/>
-    
-    <category term="剑来" scheme="https://www.kzmqvq.com/tags/%E5%89%91%E6%9D%A5/"/>
     
   </entry>
   

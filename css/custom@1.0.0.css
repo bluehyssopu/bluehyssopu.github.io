@@ -9,21 +9,7 @@
   font-size: 1.1em
 }
 
-/* 文章图片阴影设置 */
-/* #article-container .articleImg {
-  max-width: 90%;
-  margin: 1.5rem auto;
-  display: block;
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-} */
-
-/* 文章目录无标号 */
-/* .sticky_layout .toc-content .toc-number {
-    display: none;
-} */
-
-/*哔哩哔哩视频适配*/
+/*哔哩哔哩视频适配 */
 .aspect-ratio {position: relative;width: 100%;height: 0;padding-bottom: 75%;margin: 3% auto;text-align: center;}      
 .aspect-ratio iframe {
   position: absolute;
@@ -32,6 +18,11 @@
   height: 100%;
   left: 0;
   top: 0;
+}
+
+#recent-posts>.recent-post-item .post_cover img.post_bg {
+  border-radius: 30px;
+  padding: 10px
 }
 
 /* 文章链接卡片样式重写 */
@@ -236,7 +227,6 @@ h6::before {
   }
 }
 
-
 /* 风车转动速度 */
 h1::before,
 h2::before,
@@ -274,7 +264,6 @@ h6::before {
   }
 }
 
-
 /* 小风车hover效果 */
 #content-inner.layout h1:hover,
 #content-inner.layout h2:hover,
@@ -295,7 +284,6 @@ h6::before {
   -webkit-animation: ccc 3.2s linear infinite;
   animation: ccc 3.2s linear infinite;
 }
-
 
 /* 页面设置icon转动速度调整 */
 #rightside_config i.fas.fa-cog.fa-spin {

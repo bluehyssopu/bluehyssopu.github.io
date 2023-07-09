@@ -187,7 +187,7 @@
 </div>
 <p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://vip2.loli.io/2023/07/05/S9nTW3zP8JBLxk2.png" alt="BibiGPT AI学习助理" /></p>
 <div align=center class="aspect-ratio">
-    <iframe src="https://player.bilibili.com/player.html?aid=352747000&bvid=BV1fX4y1Q7Ux&cid=1029248276&page=1" 
+    <iframe src="https://player.bilibili.com/player.html?aid=352747000&bvid=BV1fX4y1Q7Ux&cid=1029248276&page=1&autoplay=false" 
     scrolling="no" 
     border="0" 
     frameborder="no" 
@@ -265,7 +265,7 @@
 <p>本篇博客内容来源于b站视频——<a href="https://www.bilibili.com/video/BV1GM411a7D2">“学历对打工人的意义？这是我听过最通透的答案”</a>，up主–<a href="https://space.bilibili.com/346749212">wrizedm</a>。希望能对即将毕业的大学生一些启迪。谁的青春不迷茫，纵使身后没有灯火，身前白雾茫茫，也要做自己的 太阳！</p>
 <h2 id="视频链接"><a class="markdownIt-Anchor" href="#视频链接"></a> 视频链接</h2>
 <div align=center class="aspect-ratio">
-    <iframe src="https://player.bilibili.com/player.html?aid=522271124&&page=1&as_wide=1&high_quality=1&danmaku=0" 
+    <iframe src="https://player.bilibili.com/player.html?aid=522271124&&page=1&as_wide=1&high_quality=1&danmaku=0&autoplay=false" 
     scrolling="no" 
     border="0" 
     frameborder="no" 
@@ -408,7 +408,7 @@
 <p>本篇博客内容来源于b站视频——<a href="https://www.bilibili.com/video/BV14e411c7SN">川普给美国年轻人的建议：从菜鸟开始, 不惧犯错，不畏流言，勇敢去追逐自己热爱的事情！</a>，抛开政治不谈，感觉说的很有道理，于是结合个人理解把翻译搬运了过来。愿各位不负韶华，饱含一腔热忱，永远年轻，永远热泪盈眶。</p>
 <h2 id="视频链接"><a class="markdownIt-Anchor" href="#视频链接"></a> 视频链接</h2>
 <div align=center class="aspect-ratio">
-    <iframe src="https://player.bilibili.com/player.html?aid=264080926&&page=1&as_wide=1&high_quality=1&danmaku=0" 
+    <iframe src="https://player.bilibili.com/player.html?aid=264080926&&page=1&as_wide=1&high_quality=1&danmaku=0&autoplay=false" 
     scrolling="no" 
     border="0" 
     frameborder="no" 
@@ -1377,7 +1377,6 @@
 <p>上大学之后呢，机会遍地都是。虽然我每天看似都在做着一些丰富多彩的事情，但是我的思想越来越束缚。有一个非常宝贵的比赛机会到来。我想一想，哎，时间不太够还是不去了吧；或者说上课的时候有一些很好的跟老师沟通的机会，但是我想了一下，还是决定继续玩手机，刷短视频。最关键的事情其实就是思想的解放。<code>而思想的解放，它的解法根本不在宿舍里，不在短视频里，也不在游戏里。应当是在和各种各样优秀的前辈老师、教授去交流，应该在于去图书馆看各种各样的书籍，然后从书籍中寻找灵感，提炼思路</code>。就算你没有上大学，各种各样子的演讲，各种各样的清北、哈佛、耶鲁的公开课都是触手可及的，只不过绝大多数人都不会去看。因为他觉得看这个课程还不如玩一个小时王者荣耀或者看两个小时短视频。</p>
 <h2 id="有关答题和选卷子"><a class="markdownIt-Anchor" href="#有关答题和选卷子"></a> 有关答题和选卷子</h2>
 <p>在高中里面我们没得选🙌，因为全国统一都是高考，但是进了大学之后，绝大多数人都还是在答题。</p>
-<p>xxxxxxxxxx const nums = document.querySelectorAll(&quot;.nums span&quot;);const counter = document.querySelector(&quot;.counter&quot;);const finalMessage = document.querySelector(&quot;.final&quot;);const replay = document.querySelector(&quot;#replay&quot;);​runAnimation();​function resetDOM() {  // 使用元素的 classList 属性可以访问或添加、删除及修改元素的 class 属性。需注意的是，支持 classList 属性的浏览器主要是一些较新版的，例如：IE10+、Firefox3.6+。使用 classList 属性访问 class 属性的格式如下：element.classList​  // classList 是一个只读属性，其返回的值为 DOMTokenList，其中包含了元素的所有 class 属性，不同的 class 属性之间使用一空格分隔。​  //  classList 调用 add()、remove() 和 toggle() 等方法可以添加、移除或修改元素 class 属性  counter.classList.remove(“hide”);  finalMessage.classList.remove(“show”);​  nums.forEach((num) =&gt; {    num.classList.value = “”;  });  nums[0].classList.add(“in”);}​function runAnimation() {  nums.forEach((num, idx) =&gt; {    const nextToLast = nums.length - 1;    // nextElementSibling 返回当前元素在其父元素的子元素节点中的后一个元素节点,如果该元素已经是最后一个元素节点,则返回null,该属性是只读的.    num.addEventListener(“animationend”, (e) =&gt; {      if (e.animationName === “goIn” &amp;&amp; idx !== nextToLast) {        num.classList.remove(“in”);        num.classList.add(“out”);      } else if (e.animationName === “goOut” &amp;&amp; num.nextElementSibling) {        num.nextElementSibling.classList.add(“in”);      } else {        // 隐藏计数 显示replay按钮        counter.classList.add(“hide”);        finalMessage.classList.add(“show”);      }    });  });}​replay.addEventListener(“click”, () =&gt; {  resetDOM();  runAnimation();});js</p>
 <p>给大家一个适合绝大多数人的解法。如果你发现你的大学很差，专业也不对头，赶紧思考怎么办？不要等到毕业一两年之后，在社会上漂泊着，被吊打去迷茫。转行之所以难，是因为你没有做好充足的准备，哪怕你学的是历史专业，是考古专业，是文物保护专业。在大学四年，你能不能报一些技能型的培训班，你能不能去考一下对应的证书下来，你能不能努力的靠自己去申请到大公司也好，小公司也好的对口的实习机会。如果说你四年都用来做这些努力，毕业之后转行是很自然的事情。</p>
 <mark class="hl-label blue">专业不好，永远不是你不进取不努力的理由和借口。</mark> 我以上讲的三点，注定很少有人能够感同身受或者听懂，但是我也要讲，因为我希望它有朝一日可以帮到值得我帮助的人。
 <p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://vip2.loli.io/2022/05/25/erTYAV4EwqZ62nx.jpg" alt="星空" /></p>

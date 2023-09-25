@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.kzmqvq.com/about/index.html</loc>
+    
+    <lastmod>2023-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.kzmqvq.com/posts/1b531470.html</loc>
     
     <lastmod>2023-07-09</lastmod>
@@ -203,15 +212,6 @@
     <loc>https://www.kzmqvq.com/posts/a3e1ba6c.html</loc>
     
     <lastmod>2023-01-26</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.kzmqvq.com/about/index.html</loc>
-    
-    <lastmod>2023-01-25</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

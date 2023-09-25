@@ -6,7 +6,7 @@
   <link href="https://www.kzmqvq.com/atom.xml" rel="self"/>
   
   <link href="https://www.kzmqvq.com/"/>
-  <updated>2023-07-09T12:43:27.436Z</updated>
+  <updated>2023-09-25T11:23:41.291Z</updated>
   <id>https://www.kzmqvq.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【JavaWeb】maven依赖管理</title>
+    <link href="https://www.kzmqvq.com/posts/63fd83a3.html"/>
+    <id>https://www.kzmqvq.com/posts/63fd83a3.html</id>
+    <published>2023-09-25T11:01:15.000Z</published>
+    <updated>2023-09-25T11:23:41.291Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2><p>记录学习JavaWeb课程中的部分知识点，包括maven依赖管理、maven高阶、Mybatis、SpringBoot自动配置等。本篇是关于maven对依赖包管理的内容。</p><h2 id="maven依赖管理"><a class="markdownIt-Anchor" href="#maven依赖管理"></a> maven依赖管理</h2><h3 id="依赖配置"><a class="markdownIt-Anchor" href="#依赖配置"></a> 依赖配置</h3><p>在项目的 <code>pom.xml</code> 中配置对应的依赖（当前项目运行需要的 <code>jar</code> 包），包括项目组织名、依赖包名及对应版本。</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.0.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupld</span>&gt;</span>ch.qos.logback<span class="tag">&lt;/<span class="name">groupld</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactld</span>&gt;</span>logback-classic<span class="tag">&lt;/<span class="name">artifactld</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">  </span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupld</span>&gt;</span>...<span class="tag">&lt;/<span class="name">groupld</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactld</span>&gt;</span>...<span class="tag">&lt;/<span class="name">artifactld</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>...<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">  </span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure><ul><li><p><code>groupid</code>和<code>artifactId</code>被统称为“坐标”，是为了保证项目唯一性而提出的，如果你要把你项目弄到maven本地仓库去，你想要找到你的项目就必须根据这两个id去查找。</p></li><li><p><code>groupId</code>：<code>groupId</code>分为几个字段，例如 <code>org.apache.tomcat</code> ，前面的 org 叫做域，后面的是项目组织者起的域名，<code>tomcat.apache.org</code>正是<code>tomcat</code>的官网。</p></li></ul><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://vip2.loli.io/2023/09/19/Slk68WdXzsixbH3.png" alt="tomcat依赖" /></p><ul><li><code>artifactId</code>：<code>artifactId</code>一般是项目名或者模块名。（可以浅显地理解为 依赖包的名称）</li></ul><blockquote><p>域又分为org、com、cn等等许多，其中org为非营利组织，com为商业组织。举个apache公司的tomcat项目例子：这个项目的groupId是org.apache.tomcat，它的域是org（因为tomcat是非营利项目），公司名称是apache，artigactId是tomcat。</p></blockquote><div class="note primary flat"><p>一般来说，包名根目录 = groupId + artifactId。这个是不允许和别人重复的，尤其是需要上线的项目。一般公司为了不重复都会注册一个域名（URL用的那种），这样就肯定不会重复了。</p></div><p>配置完成后，点击maven管理的刷新按钮，即可载入对应依赖（从本地仓库引入 或者 从远程仓库下载后引入）</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://vip2.loli.io/2023/09/19/Y5g4FX82Uw7SyNo.png" alt="载入依赖注意事项" /></p><h3 id="依赖传递"><a class="markdownIt-Anchor" href="#依赖传递"></a> 依赖传递</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://vip2.loli.io/2023/09/19/JRhEjGUtq8aByp3.png" alt="依赖传递" /></p><p>依赖具有传递性</p><ul><li>直接依赖：在当前项目中通过依赖配置建立的依赖关系</li><li>间接依赖：被依赖的资源如果依赖其他资源，当前项目间接依赖其他资源</li></ul><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://vip2.loli.io/2023/09/19/dAI5ueLH1jZUwXa.png" alt="排除依赖" /></p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">depencies</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.junit.vintage<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit-vintage-engine<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">  <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">depencies</span>&gt;</span></span><br></pre></td></tr></table></figure><p>这里将Spring Boot测试启动器<code>spring-boot-starter-test</code>添加到项目的依赖项中，并在该依赖项中排除Junit Vintage引擎依赖项<code>junit-vintage-engine</code>，以便使用其他测试框架，其中<code>scope</code>的含义见<strong>依赖范围</strong>。</p><h3 id="依赖范围"><a class="markdownIt-Anchor" href="#依赖范围"></a> 依赖范围</h3><p><code>scope</code>参数含义：</p><ul><li><code>compile</code>：参与程序的运行、测试及打包，留空时默认为compile</li><li><code>test</code>：只在测试程序范围有效，不参与主程序和打包</li><li><code>provided</code>：不参与打包</li><li><code>runtime</code>：不参与主程序</li></ul><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://vip2.loli.io/2023/09/19/v6JoRNS2pIqAzMh.png" alt="依赖作用范围" /></p><h3 id="生命周期"><a class="markdownIt-Anchor" href="#生命周期"></a> 生命周期</h3><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://vip2.loli.io/2023/09/19/vq3QwFJ9IyEKp1A.png" alt="三套生命周期" /></p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://vip2.loli.io/2023/09/19/reENSADGMtYcQ9q.png" alt="各生命周期阶段" /></p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://vip2.loli.io/2023/09/19/hlcmGf9vaBu1ObD.png" alt="生命周期阶段" /></p><blockquote><p>当点击<code>install</code>时，maven会自动运行 <code>compile、test、package、install</code> 整个阶段。</p></blockquote>]]></content>
+    
+    
+    <summary type="html">记录学习JavaWeb课程中的部分知识点，包括maven依赖管理、maven高阶、Mybatis、SpringBoot自动配置等。</summary>
+    
+    
+    
+    <category term="JavaWeb" scheme="https://www.kzmqvq.com/categories/JavaWeb/"/>
+    
+    
+    <category term="JavaWeb" scheme="https://www.kzmqvq.com/tags/JavaWeb/"/>
+    
+    <category term="后端" scheme="https://www.kzmqvq.com/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>【随手记】ChatGPT提示词指南</title>
@@ -570,33 +593,6 @@
     <category term="文摘" scheme="https://www.kzmqvq.com/tags/%E6%96%87%E6%91%98/"/>
     
     <category term="少年歌行" scheme="https://www.kzmqvq.com/tags/%E5%B0%91%E5%B9%B4%E6%AD%8C%E8%A1%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>剑来</title>
-    <link href="https://www.kzmqvq.com/posts/817d7092.html"/>
-    <id>https://www.kzmqvq.com/posts/817d7092.html</id>
-    <published>2022-05-27T01:56:35.000Z</published>
-    <updated>2023-01-26T12:02:31.137Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>请不要把陌生人的些许善意，视为珍稀的瑰宝，却把身边亲近人的全部付出，当做天经地义的事情，对其视而不见</p><p>​ ——第一章 惊蛰</p></blockquote><blockquote><p>天道崩塌，我陈平安，唯有一剑，可搬山，断江，倒海，降妖，镇魔，敕神，摘星，摧城，开天！</p><p>​——第八十四章</p></blockquote><blockquote><p>陈平安深呼吸一口气，趴在桌上，想到最后，觉得还是姚老头的一句话最容易想通，</p><p>“该是你的，就拿好别丢。不该是你的，想都别想。”</p><p>​——第八十五章 大考落幕</p></blockquote><blockquote><p>阿良豪迈笑道：“你们四个，一定要记住，每一个强者的自由，都应该以弱者的自由作为边界！真正的强者，他的对手，是天地间无形的规矩，世俗力量的强大惯性，是人皆有生老病死的铁律，是这些看不见的存在。从来没有一个强者，因为践踏弱者而强大，必然是遇强则强，愈挫愈勇。”</p><p>​——第一百一十二章 强者</p></blockquote><blockquote><p>老秀才已经缓缓起身，看着三个孩子，“坐而论道，是很好的事情。”</p><p>老秀才笑道：“但是别忘了，起而行之，则更重要，否则一切道德文章就没了立身之处。”</p><p>老秀才蓦然开始自得其乐，笑逐颜开，双手负后，摇头晃脑地走出屋子，啧啧道：“老先生坐而论道，少年郎起而行之，善，大善！”</p><p>​——第一百五十四章 老先生坐而论道</p></blockquote><blockquote><p>“少年的肩膀，就该这样才对嘛，什么家国仇恨，浩然正气的，都不要急，先挑起清风明月、杨柳依依和草长莺飞，少年郎的肩头，本就应当满是美好的事物啊。”</p><p>​——第一百五十六章 少年肩头挑着草长莺飞</p></blockquote><blockquote><p>当这个世界给予自己善意的时候，一定要好好珍惜，要惜福，无论大小。</p><p>所以烧窑的半个师傅，姚老头说过那句话，陈平安当时就觉得是天底下最好的道理。</p><p>是你的就好好抓住，不是你的就不要多想。</p><p>天底下没谁是欠你的，但是你欠了别人，就别不当回事。</p><p>​——第二百零三章 酒鬼少年郎</p></blockquote><blockquote><p>老人抬起手臂，狠狠灌了一大口烈酒，随手将那只养剑葫芦抛给少年，对着远方朗声大笑：“昔年远游四方，一肚子豪言壮语，不吐不快！”</p><p>老人站在崖畔，一脚踏出，望向天空，“当我行走于天地间，骄阳烈日，明月当空，得问我一句，天地之间足够亮堂否？” 老人转头，笑问道：“陈平安！你觉得够不够？！”</p><p>陈平安刚要低头喝一口酒，听到问题后，只得抬起头，迷迷糊糊道：“不太够？”</p><p>老人哈哈大笑，伸手指向远方，“当我行走于江湖上，大江滔滔，河水滚滚，得问我一句，江河之水足够解渴否？”</p><p>陈平安抽空连忙喝了口酒，听到老人的豪言之后，没来由也跟着有些豪气了，一手握酒葫芦，一手握拳捶在膝盖上，跟着凑热闹瞎起劲，大声道：“不够！”</p><p>老人又言，“当我行走于群山巅，琼楼玉宇，云海仙人，得问我一句，山顶罡风足够凉快否？”</p><p>满脸涨红的陈平安又喝过了大口酒，借着后劲十足的酒劲，满脸光彩，破天荒地放肆大笑道：“不够不够！远远不够！酒不够，江水山风不够！都不够！”</p><p>​——第二百零三章 酒鬼少年郎</p></blockquote><blockquote><p>阿良指了指天上，“真正的强者不在于什么无敌，而在于活着，输得再惨都别死了，而是每次都能够站起来，再次愤然出拳出剑！”</p><p>​——第二百零八章 去也</p></blockquote><blockquote><p>少年当时的醉话酒话是：齐先生，我想明白了，对世界不要失去希望，除了一定要好好活着之外，其实还有一层意思，就是当我们对这个世界给予善意后，如果非但没有得到善意的回报，甚至只有恶意，这个时候，能够不失望，才是真正的希望。齐先生，我现在道理已经想明白了，但是暂时还做不到，我喝过了酒，明天就努力……</p><p>老舟子其实已经将近五百岁高龄，见过无数人，经历过无数事，听过无数话，还是觉得少年这番话，说得很有嚼头，用来下酒正好，两坛不太够。</p><p>​——第二百六十六章 磨损心中万古刀</p></blockquote><blockquote><p>“自童年起，我便独自一人，照顾着历代星辰。”</p><p>​——第二百七十八章 武无第二，拳高天外</p></blockquote>]]></content>
-    
-    
-    <summary type="html">摘录的剑来小说中，让我感慨良多的句子。有喜悦有感动，有无奈又心酸，剑来！</summary>
-    
-    
-    
-    <category term="文案摘录" scheme="https://www.kzmqvq.com/categories/%E6%96%87%E6%A1%88%E6%91%98%E5%BD%95/"/>
-    
-    
-    <category term="中二病" scheme="https://www.kzmqvq.com/tags/%E4%B8%AD%E4%BA%8C%E7%97%85/"/>
-    
-    <category term="剑来" scheme="https://www.kzmqvq.com/tags/%E5%89%91%E6%9D%A5/"/>
-    
-    <category term="小说" scheme="https://www.kzmqvq.com/tags/%E5%B0%8F%E8%AF%B4/"/>
-    
-    <category term="文摘" scheme="https://www.kzmqvq.com/tags/%E6%96%87%E6%91%98/"/>
     
   </entry>
   

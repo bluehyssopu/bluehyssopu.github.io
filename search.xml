@@ -35,6 +35,10 @@
 <p>3、点击 <code>compose -&gt; 添加compose项目</code>，选择对应模版后点击添加，再查看容器列表，确定镜像是否启动，正常情况下，每天早上9点就会推送昨天的wakatime数据。</p>
 <p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.sa.net/2024/03/13/G79SkxyO1iYrJF6.png" alt="" /></p>
 <p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.sa.net/2024/03/13/yfOFqSvrt56AM9B.png" alt="" /></p>
+<div class="note warning flat"><p>如果docker日志中出现 <code>unknownhost</code> 的报错，请注意配置服务器的host，在<code>/etc/host</code>文件中添加对应的ip，之后刷新DNS。比如:<br />
+143.198.244.187    <a href="http://wakatime.com">wakatime.com</a><br />
+49.233.102.57    <a href="http://sc.ftqq.com">sc.ftqq.com</a></p>
+</div>
 <div class="note primary flat"><p><strong>建议使用<code>docker-compose</code>的方式</strong><br />
 个人使用<code>docker run</code>的命令一直报错，手动建文件夹给777都没用，使用<code>docker-compose.yml</code>直接成功🎉🎉🎉</p>
 </div>

@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.kzmqvq.com/posts/d856c1f0.html</loc>
+    
+    <lastmod>2024-04-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.kzmqvq.com/posts/bf5c52e7.html</loc>
     
     <lastmod>2024-03-27</lastmod>
@@ -990,6 +999,27 @@
   
   <url>
     <loc>https://www.kzmqvq.com/tags/%E7%A9%BA%E5%9F%9F%E5%A2%9E%E5%BC%BA/</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kzmqvq.com/tags/node/</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kzmqvq.com/tags/%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/</loc>
+    <lastmod>2024-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kzmqvq.com/tags/%E5%A4%9A%E6%A8%A1%E5%9D%97/</loc>
     <lastmod>2024-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

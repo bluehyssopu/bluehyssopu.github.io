@@ -6,7 +6,7 @@
   <link href="https://www.kzmqvq.com/atom.xml" rel="self"/>
   
   <link href="https://www.kzmqvq.com/"/>
-  <updated>2024-04-02T10:55:18.001Z</updated>
+  <updated>2024-04-02T10:58:59.267Z</updated>
   <id>https://www.kzmqvq.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.kzmqvq.com/posts/d856c1f0.html"/>
     <id>https://www.kzmqvq.com/posts/d856c1f0.html</id>
     <published>2024-03-28T07:54:52.000Z</published>
-    <updated>2024-04-02T10:55:18.001Z</updated>
+    <updated>2024-04-02T10:58:59.267Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2><p>最近起公司的前端项目又爆内存了，忘记之前是怎么配置的，这篇博客用于备忘。</p><h2 id="问题描述"><a class="markdownIt-Anchor" href="#问题描述"></a> 问题描述</h2><p>一个很臃肿的前端多模块项目，对应后端的多个 <code>springboot</code> 模块项目，前端每次启动都会对所有的包进行打包，影响启动速度，内存也很容易爆掉。</p><p>报错如下：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(node:28820) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 upgrade listeners added to [Server]. Use emitter.setMaxListeners() to increase <span class="built_in">limit</span></span><br><span class="line">(Use `node --trace-warnings ...` to show <span class="built_in">where</span> the warning was created)</span><br><span class="line"></span><br><span class="line">FATAL ERROR: Reached heap <span class="built_in">limit</span> Allocation failed - JavaScript heap out of memory</span><br></pre></td></tr></table></figure><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.sa.net/2024/04/02/Mf6mdbYisSICxe3.png" alt="" /></p><h2 id="解决方案"><a class="markdownIt-Anchor" href="#解决方案"></a> 解决方案</h2><p>1、使用 <code>npm</code> 安装插件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g increase-memory-limit</span><br></pre></td></tr></table></figure><p>2、项目启动前，在终端运行对应命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">increase-memory-limit</span><br><span class="line"><span class="comment"># 或者下面这句</span></span><br><span class="line">increase-memory-limit.cmd</span><br></pre></td></tr></table></figure><p>3、运行项目</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm run serve</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure><h2 id="参考链接"><a class="markdownIt-Anchor" href="#参考链接"></a> 参考链接</h2><div class="tag link"><a class="link-card" title="" href="JavaScript heap out of memory"><div class="left"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://blog.csdn.net/xiaoran_1997/article/details/125944699"/></div><div class="right"><p class="text"></p><p class="url">JavaScript heap out of memory</p></div></a></div>]]></content>
     

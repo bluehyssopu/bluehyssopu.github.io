@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>【随手记】记录一次测试环境短信服务签名出错</title>
+    <url>/posts/d8031d5c.html</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>公司一个项目完成本地开发后，上测试环境部署，出现了收发短信业务签名不一致的情况，具体表现客户身份对应的父公司签名，收到短信签名确实子公司，一番排查后，结果却让人哭笑不得……</p>
+<h2 id="解决过程"><a class="markdownIt-Anchor" href="#解决过程"></a> 解决过程</h2>
+<p>1、先看看腾讯云短信功能的签名和模版有没有失效</p>
+<p>签名和模版状态都正常</p>
+<p>2、克隆项目至本地，先本地跑起来再说</p>
+<blockquote>
+<p>免责声明：代码不是俺写的，俺就是个救火的。</p>
+</blockquote>
+<p>简单看了下函数逻辑，根据数据库中获取的客户信息，确认对应发送的短信类型 <code>sendType</code>，再根据字典表确认 <code>sendType</code> 对应的场景值 <code>sceneId</code>，每一个场景值对应着腾讯云短信服务的短信模版，决定了短信签名和内容。</p>
+<p>打断点，本地环境下各项参数都没问题，收到的短信也正常，先重新打包扔到测试环境看看。</p>
+<p>不出意外地出了意外，短信依然签名出错。</p>
+<p>3、排查业务所在平台的短信发送记录</p>
+<p>翻开对应的历史记录，顿觉大事不妙，为啥哥们本地的历史记录和测试环境不同啊，不都是从数据库里抓的吗？</p>
+<p>等等，数据库！点开 <code>git commit</code>，找到写这个功能的同事，薅来了测试数据库的账号密码，<code>navicat</code> 打开记录场景值的数据表一看，签名类型和场景值都没问题啊？总不能是判断没执行吧。</p>
+<p>在代码的发送类型判断并赋值场景值埋了日志，如果进行赋值操作就打印，同时打印赋值前后的 <code>sendType</code> 和 <code>sceneId</code>。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.sa.net/2024/04/03/iaYCTkxOwAP4jUh.png" alt="" /></p>
+<p>部署后往 <code>rancher</code> 里一蹲，md，一蹲一个不吱声( ‵o′)</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.sa.net/2024/04/03/FrKUN1zQLBXRknW.png" alt="" /></p>
+<p>测试环境下压根就没走判断 <code>sendType</code> 后对场景值赋值的语句，万能的群友提问，为什么日志中 <code>sendType</code>值在第二行才打印，模版id的日志却在同一行？</p>
+<p>特殊符号……</p>
+<p>4、排查数据库</p>
+<p>打开 navicat 对应单元格的文本内容，显示如下：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.sa.net/2024/04/03/pZ4GelWovJNIQsR.png" alt="" /></p>
+<p>一切很明显了，<code>SEND_TYPE</code> 类型为 <code>String</code> ，可视化工具显示单元格内容的最后一行，实际值为 ‘\n311696’。</p>
+<p>哪个开发，测试环境改数据加回车的……</p>
+<img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.sa.net/2024/04/03/rLK61TbWpiDOtNX.jpg" style="zoom:50%;" />]]></content>
+      <categories>
+        <category>Web</category>
+        <category>运维</category>
+      </categories>
+      <tags>
+        <tag>随手记</tag>
+        <tag>腾讯云短信</tag>
+        <tag>Java</tag>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【随手记】前端多模块项目内存溢出</title>
     <url>/posts/d856c1f0.html</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
@@ -15,7 +56,10 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g increase-memory-limit</span><br></pre></td></tr></table></figure>
 <p>2、项目启动前，在终端运行对应命令</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">increase-memory-limit</span><br><span class="line"><span class="comment"># 或者下面这句</span></span><br><span class="line">increase-memory-limit.cmd</span><br></pre></td></tr></table></figure>
-<p>3、运行项目</p>
+<p>3、在项目的 <code>vue.config.js</code> 中注释掉对应的内存限制行</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;CPU 数量&quot;</span>, <span class="built_in">require</span>(<span class="string">&#x27;os&#x27;</span>).<span class="title function_">cpus</span>().<span class="property">length</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="built_in">require</span>(<span class="string">&#x27;v8&#x27;</span>).<span class="title function_">getHeapStatistics</span>())</span><br><span class="line"><span class="comment">// args[0].memoryLimit = 4096; 这行限制注释掉</span></span><br></pre></td></tr></table></figure>
+<p>4、根据统一认证登录和单点登录的需要，修改 <code>loginType</code></p>
+<p>5、运行项目</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run serve</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
 <h2 id="参考链接"><a class="markdownIt-Anchor" href="#参考链接"></a> 参考链接</h2>
 <div class="tag link"><a class="link-card" title="JavaScript heap out of memory" href="https://blog.csdn.net/xiaoran_1997/article/details/125944699"><div class="left"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/link.png"/></div><div class="right"><p class="text">JavaScript heap out of memory</p><p class="url">https://blog.csdn.net/xiaoran_1997/article/details/125944699</p></div></a></div>]]></content>

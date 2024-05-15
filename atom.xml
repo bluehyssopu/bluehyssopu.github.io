@@ -3,11 +3,11 @@
   <title>客怎眠qvq</title>
   
   <subtitle>某菜鸟的小屋</subtitle>
-  <link href="https://www.kzmqvq.com/atom.xml" rel="self"/>
+  <link href="https://butterfly.kzmqvq.com/atom.xml" rel="self"/>
   
-  <link href="https://www.kzmqvq.com/"/>
+  <link href="https://butterfly.kzmqvq.com/"/>
   <updated>2024-05-14T02:32:00.500Z</updated>
-  <id>https://www.kzmqvq.com/</id>
+  <id>https://butterfly.kzmqvq.com/</id>
   
   <author>
     <name>客怎眠qvq</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>【Bug周刊】Vol.3</title>
-    <link href="https://www.kzmqvq.com/posts/15920565.html"/>
-    <id>https://www.kzmqvq.com/posts/15920565.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/15920565.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/15920565.html</id>
     <published>2024-05-14T02:29:18.000Z</published>
     <updated>2024-05-14T02:32:00.500Z</updated>
     
@@ -30,19 +30,19 @@
     
     
     
-    <category term="Bug周刊" scheme="https://www.kzmqvq.com/categories/Bug%E5%91%A8%E5%88%8A/"/>
+    <category term="Bug周刊" scheme="https://butterfly.kzmqvq.com/categories/Bug%E5%91%A8%E5%88%8A/"/>
     
     
-    <category term="Bug周刊" scheme="https://www.kzmqvq.com/tags/Bug%E5%91%A8%E5%88%8A/"/>
+    <category term="Bug周刊" scheme="https://butterfly.kzmqvq.com/tags/Bug%E5%91%A8%E5%88%8A/"/>
     
-    <category term="随手记" scheme="https://www.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+    <category term="随手记" scheme="https://butterfly.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>【随手记】Nginx配置详解</title>
-    <link href="https://www.kzmqvq.com/posts/384a1fa6.html"/>
-    <id>https://www.kzmqvq.com/posts/384a1fa6.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/384a1fa6.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/384a1fa6.html</id>
     <published>2024-04-25T05:55:05.000Z</published>
     <updated>2024-04-26T01:37:42.533Z</updated>
     
@@ -53,23 +53,23 @@
     
     
     
-    <category term="Web" scheme="https://www.kzmqvq.com/categories/Web/"/>
+    <category term="Web" scheme="https://butterfly.kzmqvq.com/categories/Web/"/>
     
-    <category term="运维" scheme="https://www.kzmqvq.com/categories/Web/%E8%BF%90%E7%BB%B4/"/>
+    <category term="运维" scheme="https://butterfly.kzmqvq.com/categories/Web/%E8%BF%90%E7%BB%B4/"/>
     
     
-    <category term="随手记" scheme="https://www.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+    <category term="随手记" scheme="https://butterfly.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
     
-    <category term="运维" scheme="https://www.kzmqvq.com/tags/%E8%BF%90%E7%BB%B4/"/>
+    <category term="运维" scheme="https://butterfly.kzmqvq.com/tags/%E8%BF%90%E7%BB%B4/"/>
     
-    <category term="Nginx" scheme="https://www.kzmqvq.com/tags/Nginx/"/>
+    <category term="Nginx" scheme="https://butterfly.kzmqvq.com/tags/Nginx/"/>
     
   </entry>
   
   <entry>
     <title>【百宝箱】🌟 太极工具箱：你的摸鱼新选择 🌟</title>
-    <link href="https://www.kzmqvq.com/posts/708ef8fe.html"/>
-    <id>https://www.kzmqvq.com/posts/708ef8fe.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/708ef8fe.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/708ef8fe.html</id>
     <published>2024-04-22T02:05:57.000Z</published>
     <updated>2024-04-25T05:53:28.829Z</updated>
     
@@ -80,17 +80,17 @@
     
     
     
-    <category term="实用工具" scheme="https://www.kzmqvq.com/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    <category term="实用工具" scheme="https://butterfly.kzmqvq.com/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="Tools" scheme="https://www.kzmqvq.com/tags/Tools/"/>
+    <category term="Tools" scheme="https://butterfly.kzmqvq.com/tags/Tools/"/>
     
   </entry>
   
   <entry>
     <title>【百宝箱】🌟 Kimi 智能助手 —— 智慧生活，触手可及 🌟</title>
-    <link href="https://www.kzmqvq.com/posts/70dfecc2.html"/>
-    <id>https://www.kzmqvq.com/posts/70dfecc2.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/70dfecc2.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/70dfecc2.html</id>
     <published>2024-04-17T02:09:27.000Z</published>
     <updated>2024-04-17T02:51:56.257Z</updated>
     
@@ -101,17 +101,17 @@
     
     
     
-    <category term="实用工具" scheme="https://www.kzmqvq.com/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    <category term="实用工具" scheme="https://butterfly.kzmqvq.com/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="Tools" scheme="https://www.kzmqvq.com/tags/Tools/"/>
+    <category term="Tools" scheme="https://butterfly.kzmqvq.com/tags/Tools/"/>
     
   </entry>
   
   <entry>
     <title>【随手记】pyenv的安装及使用</title>
-    <link href="https://www.kzmqvq.com/posts/6a7b3be7.html"/>
-    <id>https://www.kzmqvq.com/posts/6a7b3be7.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/6a7b3be7.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/6a7b3be7.html</id>
     <published>2024-04-08T01:28:32.000Z</published>
     <updated>2024-04-09T02:55:46.049Z</updated>
     
@@ -122,21 +122,21 @@
     
     
     
-    <category term="Python" scheme="https://www.kzmqvq.com/categories/Python/"/>
+    <category term="Python" scheme="https://butterfly.kzmqvq.com/categories/Python/"/>
     
     
-    <category term="Python" scheme="https://www.kzmqvq.com/tags/Python/"/>
+    <category term="Python" scheme="https://butterfly.kzmqvq.com/tags/Python/"/>
     
-    <category term="pyenv" scheme="https://www.kzmqvq.com/tags/pyenv/"/>
+    <category term="pyenv" scheme="https://butterfly.kzmqvq.com/tags/pyenv/"/>
     
-    <category term="版本管理" scheme="https://www.kzmqvq.com/tags/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/"/>
+    <category term="版本管理" scheme="https://butterfly.kzmqvq.com/tags/%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>【随手记】记录一次测试环境短信服务签名出错</title>
-    <link href="https://www.kzmqvq.com/posts/d8031d5c.html"/>
-    <id>https://www.kzmqvq.com/posts/d8031d5c.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/d8031d5c.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/d8031d5c.html</id>
     <published>2024-04-03T00:51:02.000Z</published>
     <updated>2024-04-09T03:19:00.806Z</updated>
     
@@ -147,25 +147,25 @@
     
     
     
-    <category term="Web" scheme="https://www.kzmqvq.com/categories/Web/"/>
+    <category term="Web" scheme="https://butterfly.kzmqvq.com/categories/Web/"/>
     
-    <category term="运维" scheme="https://www.kzmqvq.com/categories/Web/%E8%BF%90%E7%BB%B4/"/>
+    <category term="运维" scheme="https://butterfly.kzmqvq.com/categories/Web/%E8%BF%90%E7%BB%B4/"/>
     
     
-    <category term="随手记" scheme="https://www.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+    <category term="随手记" scheme="https://butterfly.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
     
-    <category term="腾讯云短信" scheme="https://www.kzmqvq.com/tags/%E8%85%BE%E8%AE%AF%E4%BA%91%E7%9F%AD%E4%BF%A1/"/>
+    <category term="腾讯云短信" scheme="https://butterfly.kzmqvq.com/tags/%E8%85%BE%E8%AE%AF%E4%BA%91%E7%9F%AD%E4%BF%A1/"/>
     
-    <category term="Java" scheme="https://www.kzmqvq.com/tags/Java/"/>
+    <category term="Java" scheme="https://butterfly.kzmqvq.com/tags/Java/"/>
     
-    <category term="数据库" scheme="https://www.kzmqvq.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="数据库" scheme="https://butterfly.kzmqvq.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
   <entry>
     <title>【随手记】前端多模块项目内存溢出</title>
-    <link href="https://www.kzmqvq.com/posts/d856c1f0.html"/>
-    <id>https://www.kzmqvq.com/posts/d856c1f0.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/d856c1f0.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/d856c1f0.html</id>
     <published>2024-03-28T07:54:52.000Z</published>
     <updated>2024-04-09T03:28:36.779Z</updated>
     
@@ -176,27 +176,27 @@
     
     
     
-    <category term="Web" scheme="https://www.kzmqvq.com/categories/Web/"/>
+    <category term="Web" scheme="https://butterfly.kzmqvq.com/categories/Web/"/>
     
-    <category term="Vue" scheme="https://www.kzmqvq.com/categories/Web/Vue/"/>
+    <category term="Vue" scheme="https://butterfly.kzmqvq.com/categories/Web/Vue/"/>
     
     
-    <category term="Vue" scheme="https://www.kzmqvq.com/tags/Vue/"/>
+    <category term="Vue" scheme="https://butterfly.kzmqvq.com/tags/Vue/"/>
     
-    <category term="前端" scheme="https://www.kzmqvq.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://butterfly.kzmqvq.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-    <category term="node" scheme="https://www.kzmqvq.com/tags/node/"/>
+    <category term="node" scheme="https://butterfly.kzmqvq.com/tags/node/"/>
     
-    <category term="内存溢出" scheme="https://www.kzmqvq.com/tags/%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/"/>
+    <category term="内存溢出" scheme="https://butterfly.kzmqvq.com/tags/%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/"/>
     
-    <category term="多模块" scheme="https://www.kzmqvq.com/tags/%E5%A4%9A%E6%A8%A1%E5%9D%97/"/>
+    <category term="多模块" scheme="https://butterfly.kzmqvq.com/tags/%E5%A4%9A%E6%A8%A1%E5%9D%97/"/>
     
   </entry>
   
   <entry>
     <title>【随手记】GitLab-CI？拿来吧你！</title>
-    <link href="https://www.kzmqvq.com/posts/bf5c52e7.html"/>
-    <id>https://www.kzmqvq.com/posts/bf5c52e7.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/bf5c52e7.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/bf5c52e7.html</id>
     <published>2024-03-27T01:07:35.000Z</published>
     <updated>2024-04-25T05:57:09.700Z</updated>
     
@@ -207,25 +207,25 @@
     
     
     
-    <category term="Web" scheme="https://www.kzmqvq.com/categories/Web/"/>
+    <category term="Web" scheme="https://butterfly.kzmqvq.com/categories/Web/"/>
     
-    <category term="运维" scheme="https://www.kzmqvq.com/categories/Web/%E8%BF%90%E7%BB%B4/"/>
+    <category term="运维" scheme="https://butterfly.kzmqvq.com/categories/Web/%E8%BF%90%E7%BB%B4/"/>
     
     
-    <category term="随手记" scheme="https://www.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+    <category term="随手记" scheme="https://butterfly.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
     
-    <category term="GitLab" scheme="https://www.kzmqvq.com/tags/GitLab/"/>
+    <category term="GitLab" scheme="https://butterfly.kzmqvq.com/tags/GitLab/"/>
     
-    <category term="CI自动化" scheme="https://www.kzmqvq.com/tags/CI%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    <category term="CI自动化" scheme="https://butterfly.kzmqvq.com/tags/CI%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
-    <category term="运维" scheme="https://www.kzmqvq.com/tags/%E8%BF%90%E7%BB%B4/"/>
+    <category term="运维" scheme="https://butterfly.kzmqvq.com/tags/%E8%BF%90%E7%BB%B4/"/>
     
   </entry>
   
   <entry>
     <title>【Bug周刊】Vol.2</title>
-    <link href="https://www.kzmqvq.com/posts/629535f3.html"/>
-    <id>https://www.kzmqvq.com/posts/629535f3.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/629535f3.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/629535f3.html</id>
     <published>2024-03-13T08:03:11.000Z</published>
     <updated>2024-03-19T03:09:09.683Z</updated>
     
@@ -236,19 +236,19 @@
     
     
     
-    <category term="Bug周刊" scheme="https://www.kzmqvq.com/categories/Bug%E5%91%A8%E5%88%8A/"/>
+    <category term="Bug周刊" scheme="https://butterfly.kzmqvq.com/categories/Bug%E5%91%A8%E5%88%8A/"/>
     
     
-    <category term="Bug周刊" scheme="https://www.kzmqvq.com/tags/Bug%E5%91%A8%E5%88%8A/"/>
+    <category term="Bug周刊" scheme="https://butterfly.kzmqvq.com/tags/Bug%E5%91%A8%E5%88%8A/"/>
     
-    <category term="随手记" scheme="https://www.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+    <category term="随手记" scheme="https://butterfly.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>【Bug周刊】Vol.1</title>
-    <link href="https://www.kzmqvq.com/posts/fb9c6449.html"/>
-    <id>https://www.kzmqvq.com/posts/fb9c6449.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/fb9c6449.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/fb9c6449.html</id>
     <published>2024-02-26T09:54:56.000Z</published>
     <updated>2024-03-15T03:16:47.892Z</updated>
     
@@ -259,46 +259,46 @@
     
     
     
-    <category term="Bug周刊" scheme="https://www.kzmqvq.com/categories/Bug%E5%91%A8%E5%88%8A/"/>
+    <category term="Bug周刊" scheme="https://butterfly.kzmqvq.com/categories/Bug%E5%91%A8%E5%88%8A/"/>
     
     
-    <category term="Bug周刊" scheme="https://www.kzmqvq.com/tags/Bug%E5%91%A8%E5%88%8A/"/>
+    <category term="Bug周刊" scheme="https://butterfly.kzmqvq.com/tags/Bug%E5%91%A8%E5%88%8A/"/>
     
-    <category term="随手记" scheme="https://www.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+    <category term="随手记" scheme="https://butterfly.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>【随手记】docker搭建wordpress</title>
-    <link href="https://www.kzmqvq.com/posts/cf3334e.html"/>
-    <id>https://www.kzmqvq.com/posts/cf3334e.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/cf3334e.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/cf3334e.html</id>
     <published>2024-02-26T08:16:35.000Z</published>
-    <updated>2024-02-26T09:42:26.680Z</updated>
+    <updated>2024-05-15T00:46:25.399Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2><p>最近外快需要，重新部署了<code>wordpress</code>，因为是小水管，自然想到了<code>docker</code>，在我不需要演示的时候可以停掉相应的服务，而且停掉后不用担心部署其他服务时端口冲突的问题，这样我的<code>nacos</code>和<code>nexus</code>都不会受到影响🎉。环境是腾讯云的宝塔镜像。</p><h2 id="部署过程"><a class="markdownIt-Anchor" href="#部署过程"></a> 部署过程</h2><p>1、提前开放<strong>宝塔防火墙</strong>和<strong>腾讯云服务器的防火墙</strong>的3306、8080、80端口 （宝塔里面开三个、腾讯云安全组里再开相同的三个）</p><p>2、新建并启动MySQL容器</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ docker container run \</span><br><span class="line">  -d \</span><br><span class="line">  --name wordpressdb \</span><br><span class="line">  --<span class="built_in">env</span> MYSQL_ROOT_PASSWORD=123456 \</span><br><span class="line">  --<span class="built_in">env</span> MYSQL_DATABASE=wordpress \</span><br><span class="line">  mysql:5.7</span><br></pre></td></tr></table></figure><p>3、新建并启动WordPress容器</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker container run \</span><br><span class="line">  -d \</span><br><span class="line">  -p 8080:80 \</span><br><span class="line">  --name wordpress \</span><br><span class="line">  --<span class="built_in">env</span> WORDPRESS_DB_PASSWORD=123456 \</span><br><span class="line">  --<span class="built_in">link</span> wordpressdb:mysql \</span><br><span class="line">  --volume <span class="string">&quot;<span class="variable">$PWD</span>/wordpress&quot;</span>:/var/www/html \</span><br><span class="line">  wordpress</span><br></pre></td></tr></table></figure><p>4、修改WordPress的数据库配置文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-16-16-centos ~]<span class="comment"># vim wordpress/wp-config.php</span></span><br></pre></td></tr></table></figure><p>进入配置文件后，修改下列内容（第2、3、4步的密码记得改啊，别真搞123456）</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ** MySQL settings - You can get this info from your web host ** //</span></span><br><span class="line"><span class="comment">/** The name of the database for WordPress */</span></span><br><span class="line"><span class="title function_ invoke__">define</span>( <span class="string">&#x27;DB_NAME&#x27;</span>, <span class="title function_ invoke__">getenv_docker</span>(<span class="string">&#x27;WORDPRESS_DB_NAME&#x27;</span>, <span class="string">&#x27;wordpress&#x27;</span>) );</span><br><span class="line"><span class="comment">/** MySQL database username */</span></span><br><span class="line"><span class="title function_ invoke__">define</span>( <span class="string">&#x27;DB_USER&#x27;</span>, <span class="title function_ invoke__">getenv_docker</span>(<span class="string">&#x27;WORDPRESS_DB_USER&#x27;</span>, <span class="string">&#x27;root&#x27;</span>) );</span><br><span class="line"><span class="comment">/** MySQL database password */</span></span><br><span class="line"><span class="title function_ invoke__">define</span>( <span class="string">&#x27;DB_PASSWORD&#x27;</span>, <span class="title function_ invoke__">getenv_docker</span>(<span class="string">&#x27;WORDPRESS_DB_PASSWORD&#x27;</span>, <span class="string">&#x27;123456&#x27;</span>) );</span><br></pre></td></tr></table></figure><p>保存后退出（按<code>esc</code>， 输入 <code>:wq</code> 保存后退出）</p><hr /><p>这里访问 你的服务器公网ip地址:8080（类似 127.0.0.1:8080），进入WordPress安装界面，就可以完成初始化，正常访问写文章了。</p><p>我没有在docker安装命令中加<code>--rm</code>，这会在停止容器后自动删除镜像，与需求不符。</p><p><code>WORDPRESS_DB_PASSWORD=123456</code>、<code>MYSQL_ROOT_PASSWORD=123456</code>、<code>getenv_docker('WORDPRESS_DB_PASSWORD', '123456')</code>中的<code>123456</code>记得改成复杂点的密码。当然，不改也能跑🤣</p><h2 id="参考链接"><a class="markdownIt-Anchor" href="#参考链接"></a> 参考链接</h2><div class="tag link"><a class="link-card" title="Docker五分钟搭建Wordpress" href="https://developer.aliyun.com/article/900120"><div class="left"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/link.png"/></div><div class="right"><p class="text">Docker五分钟搭建Wordpress</p><p class="url">https://developer.aliyun.com/article/900120</p></div></a></div> <h2 id="个人主题配置"><a class="markdownIt-Anchor" href="#个人主题配置"></a> 个人主题配置</h2><p>主题：Freshblog Newsfeed</p><p>启用顶部图、禁用侧栏、修改顶部图样式、修改页脚的背景色及内容、设置layout的文章为三列，效果如下：</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.sa.net/2024/02/26/2X7aiJ1ovkxZlNu.png" alt="" /></p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.sa.net/2024/02/26/GRU78QJ64es9ZAy.png" alt="" /></p><p>主题编辑器，将WordPress登录后顶部的黑边消除掉：</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.sa.net/2024/02/26/nuQyeEqmk9d2sHt.png" alt="image-20240226173409143" /></p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_ invoke__">show_admin_bar</span>(<span class="literal">false</span>);</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2><p>最近外快需要，重新部署了<code>wordpress</code>，因为是小水管，自然想到了<code>docker</code>，在我不需要演示的时候可以停掉相应的服务，而且停掉后不用担心部署其他服务时端口冲突的问题，这样我的<code>nacos</code>和<code>nexus</code>都不会受到影响🎉。环境是腾讯云的宝塔镜像。</p><h2 id="部署过程"><a class="markdownIt-Anchor" href="#部署过程"></a> 部署过程</h2><p>1、提前开放<strong>宝塔防火墙</strong>和<strong>腾讯云服务器的防火墙</strong>的3306、8080、80端口 （宝塔里面开三个、腾讯云安全组里再开相同的三个）</p><p>2、新建并启动MySQL容器</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ docker container run \</span><br><span class="line">  -d \</span><br><span class="line">  --name wordpressdb \</span><br><span class="line">  --<span class="built_in">env</span> MYSQL_ROOT_PASSWORD=123456 \</span><br><span class="line">  --<span class="built_in">env</span> MYSQL_DATABASE=wordpress \</span><br><span class="line">  mysql:5.7</span><br></pre></td></tr></table></figure><p>3、新建并启动WordPress容器</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker container run \</span><br><span class="line">  -d \</span><br><span class="line">  -p 8080:80 \</span><br><span class="line">  --name wordpress \</span><br><span class="line">  --<span class="built_in">env</span> WORDPRESS_DB_PASSWORD=123456 \</span><br><span class="line">  --<span class="built_in">link</span> wordpressdb:mysql \</span><br><span class="line">  --volume <span class="string">&quot;<span class="variable">$PWD</span>/wordpress&quot;</span>:/var/www/html \</span><br><span class="line">  wordpress</span><br></pre></td></tr></table></figure><p>4、修改WordPress的数据库配置文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-16-16-centos ~]<span class="comment"># vim wordpress/wp-config.php</span></span><br></pre></td></tr></table></figure><p>进入配置文件后，修改下列内容（第2、3、4步的密码记得改啊，别真搞123456）</p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ** MySQL settings - You can get this info from your web host ** //</span></span><br><span class="line"><span class="comment">/** The name of the database for WordPress */</span></span><br><span class="line"><span class="title function_ invoke__">define</span>( <span class="string">&#x27;DB_NAME&#x27;</span>, <span class="title function_ invoke__">getenv_docker</span>(<span class="string">&#x27;WORDPRESS_DB_NAME&#x27;</span>, <span class="string">&#x27;wordpress&#x27;</span>) );</span><br><span class="line"><span class="comment">/** MySQL database username */</span></span><br><span class="line"><span class="title function_ invoke__">define</span>( <span class="string">&#x27;DB_USER&#x27;</span>, <span class="title function_ invoke__">getenv_docker</span>(<span class="string">&#x27;WORDPRESS_DB_USER&#x27;</span>, <span class="string">&#x27;root&#x27;</span>) );</span><br><span class="line"><span class="comment">/** MySQL database password */</span></span><br><span class="line"><span class="title function_ invoke__">define</span>( <span class="string">&#x27;DB_PASSWORD&#x27;</span>, <span class="title function_ invoke__">getenv_docker</span>(<span class="string">&#x27;WORDPRESS_DB_PASSWORD&#x27;</span>, <span class="string">&#x27;123456&#x27;</span>) );</span><br></pre></td></tr></table></figure><p>保存后退出（按<code>esc</code>， 输入 <code>:wq</code> 保存后退出）</p><hr /><p>这里访问 你的服务器公网ip地址:8080（类似 127.0.0.1:8080），进入WordPress安装界面，就可以完成初始化，正常访问写文章了。</p><p>我没有在docker安装命令中加<code>--rm</code>，这会在停止容器后自动删除镜像，与需求不符。</p><p><code>WORDPRESS_DB_PASSWORD=123456</code>、<code>MYSQL_ROOT_PASSWORD=123456</code>、<code>getenv_docker('WORDPRESS_DB_PASSWORD', '123456')</code>中的<code>123456</code>记得改成复杂点的密码。当然，不改也能跑🤣</p><hr /><h2 id="上传文件大小限制"><a class="markdownIt-Anchor" href="#上传文件大小限制"></a> 上传文件大小限制</h2><p>进入 <code>wordpress</code> 容器内，复制 <code>php.ini</code> 配置文件，修改对应的文件大小限制参数。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># wordpress是你wordpress的容器id或名称</span></span><br><span class="line">docker <span class="built_in">exec</span> -it wordpress /bin/bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 复制配置文件，以便php配置生效 容器本身没有php.ini</span></span><br><span class="line"><span class="built_in">cp</span> /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改php.ini</span></span><br><span class="line">vim /usr/local/etc/php/php.ini</span><br><span class="line"></span><br><span class="line"><span class="comment"># 具体配置参考</span></span><br><span class="line"><span class="comment"># upload_max_filesize = 500M#文件大小限制</span></span><br><span class="line"><span class="comment"># post_max_size = 510M#post大小限制</span></span><br><span class="line"><span class="comment"># memory_limit = 520M#内存占用限制</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 重启容器</span></span><br><span class="line">docker restart wordpress</span><br></pre></td></tr></table></figure><h2 id="参考链接"><a class="markdownIt-Anchor" href="#参考链接"></a> 参考链接</h2><div class="tag link"><a class="link-card" title="Docker五分钟搭建Wordpress" href="https://developer.aliyun.com/article/900120"><div class="left"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/link.png"/></div><div class="right"><p class="text">Docker五分钟搭建Wordpress</p><p class="url">https://developer.aliyun.com/article/900120</p></div></a></div> <h2 id="个人主题配置"><a class="markdownIt-Anchor" href="#个人主题配置"></a> 个人主题配置</h2><p>主题：Freshblog Newsfeed</p><p>启用顶部图、禁用侧栏、修改顶部图样式、修改页脚的背景色及内容、设置layout的文章为三列，效果如下：</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.sa.net/2024/02/26/2X7aiJ1ovkxZlNu.png" alt="" /></p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.sa.net/2024/02/26/GRU78QJ64es9ZAy.png" alt="" /></p><p>主题编辑器，将WordPress登录后顶部的黑边消除掉：</p><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.sa.net/2024/02/26/nuQyeEqmk9d2sHt.png" alt="image-20240226173409143" /></p><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_ invoke__">show_admin_bar</span>(<span class="literal">false</span>);</span><br></pre></td></tr></table></figure>]]></content>
     
     
     <summary type="html">使用docker完成wordpress快速建站，并实现主题页面初始化。</summary>
     
     
     
-    <category term="Web" scheme="https://www.kzmqvq.com/categories/Web/"/>
+    <category term="Web" scheme="https://butterfly.kzmqvq.com/categories/Web/"/>
     
-    <category term="docker" scheme="https://www.kzmqvq.com/categories/Web/docker/"/>
+    <category term="docker" scheme="https://butterfly.kzmqvq.com/categories/Web/docker/"/>
     
     
-    <category term="随手记" scheme="https://www.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+    <category term="随手记" scheme="https://butterfly.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
     
-    <category term="docker" scheme="https://www.kzmqvq.com/tags/docker/"/>
+    <category term="docker" scheme="https://butterfly.kzmqvq.com/tags/docker/"/>
     
-    <category term="wordpress" scheme="https://www.kzmqvq.com/tags/wordpress/"/>
+    <category term="wordpress" scheme="https://butterfly.kzmqvq.com/tags/wordpress/"/>
     
   </entry>
   
   <entry>
     <title>【JavaWeb】mybatis基础</title>
-    <link href="https://www.kzmqvq.com/posts/417eb291.html"/>
-    <id>https://www.kzmqvq.com/posts/417eb291.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/417eb291.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/417eb291.html</id>
     <published>2023-10-14T12:16:28.000Z</published>
     <updated>2024-02-20T02:54:35.548Z</updated>
     
@@ -309,19 +309,19 @@
     
     
     
-    <category term="JavaWeb" scheme="https://www.kzmqvq.com/categories/JavaWeb/"/>
+    <category term="JavaWeb" scheme="https://butterfly.kzmqvq.com/categories/JavaWeb/"/>
     
     
-    <category term="JavaWeb" scheme="https://www.kzmqvq.com/tags/JavaWeb/"/>
+    <category term="JavaWeb" scheme="https://butterfly.kzmqvq.com/tags/JavaWeb/"/>
     
-    <category term="后端" scheme="https://www.kzmqvq.com/tags/%E5%90%8E%E7%AB%AF/"/>
+    <category term="后端" scheme="https://butterfly.kzmqvq.com/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>【JavaWeb】maven依赖管理</title>
-    <link href="https://www.kzmqvq.com/posts/63fd83a3.html"/>
-    <id>https://www.kzmqvq.com/posts/63fd83a3.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/63fd83a3.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/63fd83a3.html</id>
     <published>2023-09-25T11:01:15.000Z</published>
     <updated>2023-09-25T11:23:41.291Z</updated>
     
@@ -332,19 +332,19 @@
     
     
     
-    <category term="JavaWeb" scheme="https://www.kzmqvq.com/categories/JavaWeb/"/>
+    <category term="JavaWeb" scheme="https://butterfly.kzmqvq.com/categories/JavaWeb/"/>
     
     
-    <category term="JavaWeb" scheme="https://www.kzmqvq.com/tags/JavaWeb/"/>
+    <category term="JavaWeb" scheme="https://butterfly.kzmqvq.com/tags/JavaWeb/"/>
     
-    <category term="后端" scheme="https://www.kzmqvq.com/tags/%E5%90%8E%E7%AB%AF/"/>
+    <category term="后端" scheme="https://butterfly.kzmqvq.com/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>【随手记】ChatGPT提示词指南</title>
-    <link href="https://www.kzmqvq.com/posts/66c40c65.html"/>
-    <id>https://www.kzmqvq.com/posts/66c40c65.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/66c40c65.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/66c40c65.html</id>
     <published>2023-07-05T05:30:08.000Z</published>
     <updated>2023-07-09T12:43:27.436Z</updated>
     
@@ -355,21 +355,21 @@
     
     
     
-    <category term="实用工具" scheme="https://www.kzmqvq.com/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
+    <category term="实用工具" scheme="https://butterfly.kzmqvq.com/categories/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="小工具" scheme="https://www.kzmqvq.com/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
+    <category term="小工具" scheme="https://butterfly.kzmqvq.com/tags/%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
     
-    <category term="Tools" scheme="https://www.kzmqvq.com/tags/Tools/"/>
+    <category term="Tools" scheme="https://butterfly.kzmqvq.com/tags/Tools/"/>
     
-    <category term="ChatGPT" scheme="https://www.kzmqvq.com/tags/ChatGPT/"/>
+    <category term="ChatGPT" scheme="https://butterfly.kzmqvq.com/tags/ChatGPT/"/>
     
   </entry>
   
   <entry>
     <title>【客说闲谈】学历对打工人的意义</title>
-    <link href="https://www.kzmqvq.com/posts/1b531470.html"/>
-    <id>https://www.kzmqvq.com/posts/1b531470.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/1b531470.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/1b531470.html</id>
     <published>2023-02-09T03:25:38.000Z</published>
     <updated>2024-02-22T09:18:23.106Z</updated>
     
@@ -380,23 +380,23 @@
     
     
     
-    <category term="客说闲谈" scheme="https://www.kzmqvq.com/categories/%E5%AE%A2%E8%AF%B4%E9%97%B2%E8%B0%88/"/>
+    <category term="客说闲谈" scheme="https://butterfly.kzmqvq.com/categories/%E5%AE%A2%E8%AF%B4%E9%97%B2%E8%B0%88/"/>
     
     
-    <category term="客说闲谈" scheme="https://www.kzmqvq.com/tags/%E5%AE%A2%E8%AF%B4%E9%97%B2%E8%B0%88/"/>
+    <category term="客说闲谈" scheme="https://butterfly.kzmqvq.com/tags/%E5%AE%A2%E8%AF%B4%E9%97%B2%E8%B0%88/"/>
     
-    <category term="学历" scheme="https://www.kzmqvq.com/tags/%E5%AD%A6%E5%8E%86/"/>
+    <category term="学历" scheme="https://butterfly.kzmqvq.com/tags/%E5%AD%A6%E5%8E%86/"/>
     
-    <category term="打工人" scheme="https://www.kzmqvq.com/tags/%E6%89%93%E5%B7%A5%E4%BA%BA/"/>
+    <category term="打工人" scheme="https://butterfly.kzmqvq.com/tags/%E6%89%93%E5%B7%A5%E4%BA%BA/"/>
     
-    <category term="客怎眠qvq" scheme="https://www.kzmqvq.com/tags/%E5%AE%A2%E6%80%8E%E7%9C%A0qvq/"/>
+    <category term="客怎眠qvq" scheme="https://butterfly.kzmqvq.com/tags/%E5%AE%A2%E6%80%8E%E7%9C%A0qvq/"/>
     
   </entry>
   
   <entry>
     <title>【随手记】微信小程序入坑指南</title>
-    <link href="https://www.kzmqvq.com/posts/4adda35c.html"/>
-    <id>https://www.kzmqvq.com/posts/4adda35c.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/4adda35c.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/4adda35c.html</id>
     <published>2023-02-09T03:24:45.000Z</published>
     <updated>2023-03-05T14:15:32.384Z</updated>
     
@@ -407,19 +407,19 @@
     
     
     
-    <category term="Web" scheme="https://www.kzmqvq.com/categories/Web/"/>
+    <category term="Web" scheme="https://butterfly.kzmqvq.com/categories/Web/"/>
     
-    <category term="微信小程序" scheme="https://www.kzmqvq.com/categories/Web/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    <category term="微信小程序" scheme="https://butterfly.kzmqvq.com/categories/Web/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
     
-    <category term="微信小程序" scheme="https://www.kzmqvq.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    <category term="微信小程序" scheme="https://butterfly.kzmqvq.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
   <entry>
     <title>【客说闲谈】川普给美国年轻人的建议：不畏流言，勇敢逐梦</title>
-    <link href="https://www.kzmqvq.com/posts/9d6fbd99.html"/>
-    <id>https://www.kzmqvq.com/posts/9d6fbd99.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/9d6fbd99.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/9d6fbd99.html</id>
     <published>2023-01-31T10:08:15.000Z</published>
     <updated>2023-07-09T12:46:36.342Z</updated>
     
@@ -430,17 +430,17 @@
     
     
     
-    <category term="客说闲谈" scheme="https://www.kzmqvq.com/categories/%E5%AE%A2%E8%AF%B4%E9%97%B2%E8%B0%88/"/>
+    <category term="客说闲谈" scheme="https://butterfly.kzmqvq.com/categories/%E5%AE%A2%E8%AF%B4%E9%97%B2%E8%B0%88/"/>
     
     
-    <category term="客说闲谈" scheme="https://www.kzmqvq.com/tags/%E5%AE%A2%E8%AF%B4%E9%97%B2%E8%B0%88/"/>
+    <category term="客说闲谈" scheme="https://butterfly.kzmqvq.com/tags/%E5%AE%A2%E8%AF%B4%E9%97%B2%E8%B0%88/"/>
     
   </entry>
   
   <entry>
     <title>【随手记】数据类型</title>
-    <link href="https://www.kzmqvq.com/posts/889c180f.html"/>
-    <id>https://www.kzmqvq.com/posts/889c180f.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/889c180f.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/889c180f.html</id>
     <published>2022-09-19T14:26:59.000Z</published>
     <updated>2024-02-26T01:16:20.389Z</updated>
     
@@ -451,25 +451,25 @@
     
     
     
-    <category term="Web" scheme="https://www.kzmqvq.com/categories/Web/"/>
+    <category term="Web" scheme="https://butterfly.kzmqvq.com/categories/Web/"/>
     
-    <category term="JavaScript" scheme="https://www.kzmqvq.com/categories/Web/JavaScript/"/>
+    <category term="JavaScript" scheme="https://butterfly.kzmqvq.com/categories/Web/JavaScript/"/>
     
     
-    <category term="Web" scheme="https://www.kzmqvq.com/tags/Web/"/>
+    <category term="Web" scheme="https://butterfly.kzmqvq.com/tags/Web/"/>
     
-    <category term="前端" scheme="https://www.kzmqvq.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://butterfly.kzmqvq.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-    <category term="随手记" scheme="https://www.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+    <category term="随手记" scheme="https://butterfly.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
     
-    <category term="JavaScript" scheme="https://www.kzmqvq.com/tags/JavaScript/"/>
+    <category term="JavaScript" scheme="https://butterfly.kzmqvq.com/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>【随手记】Vue知识点</title>
-    <link href="https://www.kzmqvq.com/posts/97bf29f1.html"/>
-    <id>https://www.kzmqvq.com/posts/97bf29f1.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/97bf29f1.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/97bf29f1.html</id>
     <published>2022-09-17T12:11:36.000Z</published>
     <updated>2023-01-24T04:52:22.171Z</updated>
     
@@ -480,25 +480,25 @@
     
     
     
-    <category term="Web" scheme="https://www.kzmqvq.com/categories/Web/"/>
+    <category term="Web" scheme="https://butterfly.kzmqvq.com/categories/Web/"/>
     
-    <category term="Vue" scheme="https://www.kzmqvq.com/categories/Web/Vue/"/>
+    <category term="Vue" scheme="https://butterfly.kzmqvq.com/categories/Web/Vue/"/>
     
     
-    <category term="Web" scheme="https://www.kzmqvq.com/tags/Web/"/>
+    <category term="Web" scheme="https://butterfly.kzmqvq.com/tags/Web/"/>
     
-    <category term="Vue" scheme="https://www.kzmqvq.com/tags/Vue/"/>
+    <category term="Vue" scheme="https://butterfly.kzmqvq.com/tags/Vue/"/>
     
-    <category term="前端" scheme="https://www.kzmqvq.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://butterfly.kzmqvq.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-    <category term="随手记" scheme="https://www.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
+    <category term="随手记" scheme="https://butterfly.kzmqvq.com/tags/%E9%9A%8F%E6%89%8B%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>【项目总结】TypeScript基础</title>
-    <link href="https://www.kzmqvq.com/posts/1c5c8a7f.html"/>
-    <id>https://www.kzmqvq.com/posts/1c5c8a7f.html</id>
+    <link href="https://butterfly.kzmqvq.com/posts/1c5c8a7f.html"/>
+    <id>https://butterfly.kzmqvq.com/posts/1c5c8a7f.html</id>
     <published>2022-09-06T13:56:52.000Z</published>
     <updated>2023-01-24T04:52:13.982Z</updated>
     
@@ -509,18 +509,18 @@
     
     
     
-    <category term="项目总结" scheme="https://www.kzmqvq.com/categories/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    <category term="项目总结" scheme="https://butterfly.kzmqvq.com/categories/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
     
     
-    <category term="Vue3" scheme="https://www.kzmqvq.com/tags/Vue3/"/>
+    <category term="Vue3" scheme="https://butterfly.kzmqvq.com/tags/Vue3/"/>
     
-    <category term="项目总结" scheme="https://www.kzmqvq.com/tags/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
+    <category term="项目总结" scheme="https://butterfly.kzmqvq.com/tags/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93/"/>
     
-    <category term="笔记" scheme="https://www.kzmqvq.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    <category term="笔记" scheme="https://butterfly.kzmqvq.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
-    <category term="后台管理系统" scheme="https://www.kzmqvq.com/tags/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
+    <category term="后台管理系统" scheme="https://butterfly.kzmqvq.com/tags/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"/>
     
-    <category term="TypeScript" scheme="https://www.kzmqvq.com/tags/TypeScript/"/>
+    <category term="TypeScript" scheme="https://butterfly.kzmqvq.com/tags/TypeScript/"/>
     
   </entry>
   

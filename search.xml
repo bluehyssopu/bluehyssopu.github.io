@@ -1,6 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>【Bug周刊】Vol-5</title>
+    <url>/posts/d7dcf393.html</url>
+    <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>最近开发中遇到很多相同的问题，下意识去翻自己的历史记录，但又没能快速定位。我的<code>trilium</code>一直用来记录自己的周报和相关教程，对于常见的bug和修复方案也找不到合适的地方，只能穿插在日报的历史中，随时间沉没。无意间翻到子舒的奇趣周刊，Bug周刊也由此而生。</p>
+<div class="note info flat"><p>看蛊真人真上头hhh，一路寒风身如絮，命海沉浮客独行！</p>
+</div>
+<h2 id="数据同步微服务datasync"><a class="markdownIt-Anchor" href="#数据同步微服务datasync"></a> 数据同步微服务(dataSync)</h2>
+<h3 id="问题描述"><a class="markdownIt-Anchor" href="#问题描述"></a> 问题描述</h3>
+<div class="note warning flat"><p>原负责数据同步服务代码编写的同事run了，临时被叫过来完成这个半成品，无文档、无注释、无部署说明，等于从零开始😭</p>
+</div>
+<p><strong>LY，我顶你个肺啊</strong></p>
+<p>项目A向项目B同步数据，项目B使用 <code>nacos</code> 作为配置中心，<code>Rancher</code> 管理集群服务的部署及日志，项目A推送数据的同事反馈MQ的数据没有消费，全部在waiting状态。已知信息就这些。</p>
+<p>需要在原项目上保证跑通，同时正常推送数据、拓展推送字段。本小节内容讲述的是踩坑的过程，可能会有些无聊🤣</p>
+<h3 id="解决方案"><a class="markdownIt-Anchor" href="#解决方案"></a> 解决方案</h3>
+<p><strong>1️⃣ 本地启动项目A</strong></p>
+<p>手动调用本地服务接口，复现问题，从项目A服务推送数据显示 <code>can't connect to [10.xx.xx.xx:80xx]</code>，哪个开发的本地环境端口？？？代码一层层翻，找到各接口推送对应的配置数据表，修改推送的地址和端口数据，再次手动推送一条数据，成功推送，排除该服务的问题。</p>
+<p><strong>2️⃣ 查看项目B的日志</strong></p>
+<p>日志显示手动同步数据时，接口返回未授权401，与负责项目A的同事确认，他们并没有携带对应的 <code>Authorization</code> 头，其他相关的数据同步接口也是如此，但调用正常，判断是白名单的问题。</p>
+<p>打开 <code>nacos</code> 配置文件，dataSync 对应的 <code>yml</code> 文件果然没有对该接口的白名单配置，添加白名单，重启相关服务。</p>
+<p>再次调用接口验证，<strong>正常写入数据同步的历史表</strong>（这里留个坑），但是前端页面并没有显示数据。</p>
+<p><strong>3️⃣ 启动前端项目</strong></p>
+<p>简单配置 React 项目的 config 文件，启动前端项目，定位代码文件及控制台报错，控制台显示 error，响应信息提示 <code>unknown column 'xx' in 'field list'</code></p>
+<p>对比前端列表循环的字段名、后端JPA映射的数据库字段和数据库字段，三者有细微的差异，前后端代码是一致的，只有数据库的列名有出入，可能是跑路的同事在开发时，没有将后端的实体类字段和数据库字段一一对应，导致后端查询报错，前端页面为空。</p>
+<p>修改数据库某一列名后，正常映射，手动调用接口同步一条数据后，仍不能在前端显示同步数据。</p>
+<p>在数据表中手动添加数据后，前端正常显示，说明<strong>从数据同步历史表到业务表的写入存在问题</strong>，就是<strong>2️⃣</strong>的坑。</p>
+<p><strong>4️⃣ 调试项目B的数据同步代码</strong></p>
+<p>在接受数据后，将日志和同步历史数据分别存入对应的两张表，再通过MQ保留数据同步历史表中的主键和其他id(生产)。</p>
+<p>利用MQ中的主键和其他id信息查询对应的数据，利用 FeignClient 定义的接口，<strong>与系统服务进行远程调用，实现数据同步功能</strong>，将新增的数据从历史表写入至业务表(消费)。</p>
+<p>查看日志表的内容，又出现了401的问题。等等，系统服务远程调用？md，<code>system</code> 对应的 <code>yml</code> 配置应该也有一处远程调用的白名单.</p>
+<p>修改 nacos 的 system 配置，重启数据同步服务和系统服务，再试一次。</p>
+<p>业务表中有数据，但是前端不显示，查询的结果是空。</p>
+<p><strong>5️⃣ SQL语句逻辑验证</strong></p>
+<p>在对数据表的JPA映射中，添加了全局的筛选，只查询标记为未删除的数据，但是<strong>结构体中没有对该字段进行初始化</strong>，null 值是无法匹配的，所以查询结果为空。</p>
+<p>同时，数据写入业务表后会对数据更新日志进行写入，该表的一个列名也有出入，处理方法与<strong>3️⃣</strong>一致，修改后业务流程终于正常，数据同步成功，前端页面显示数据。</p>
+<p>最终的处理流程大致是这样👇</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.sa.net/2024/07/10/S7OmNo4tGeXnUy1.png" alt="" /></p>
+<p><strong>LY，我顶你个肺！</strong></p>
+]]></content>
+      <categories>
+        <category>Bug周刊</category>
+      </categories>
+      <tags>
+        <tag>Bug周刊</tag>
+        <tag>随手记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【Bug周刊】Vol.4</title>
     <url>/posts/8bf690c6.html</url>
     <content><![CDATA[<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
@@ -77,7 +124,8 @@
 <li><strong>按官方企业微信举例，构造授权链接：</strong></li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://open.weixin.qq.com/connect/oauth2/authorize?appid=CORPID&amp;redirect_uri=REDIRECT_URI&amp;response_type=code&amp;scope=SCOPE&amp;agentid=AGENTID&amp;state=STATE#wechat_redirect</span><br></pre></td></tr></table></figure>
-<p>CORPID 为集成的企业应用id（即ww或wx开头的suite_id），在应用里面看配置信息！！！如果你不知道应该在应用里看id，还是在全局看id（分不清cropId 和 agentId），就直接看开头是不是ww或者wx。</p>
+<p>AGENTID 为集成的企业应用id（一般是一串数字即1000xxx），在应用里面看配置信息！！！如果你不知道应该在应用里看id，还是在全局看id（分不清cropId 和 agentId），就直接看开头是不是ww或者wx。CROPID 是企业ID(即ww或wx开头的suite_id)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">|—— cropId #企业ID 对应着 appid=CORPID 的值</span><br><span class="line">  |—————— 应用1 #包括应用id和secrect</span><br><span class="line">    |—————— agentId #对应的 agentid=AGENTID 的值</span><br><span class="line">    |—————— secrect #对应的 corpsecret=SECRET 的值</span><br><span class="line">  |—————— 应用2</span><br><span class="line">    |—————— agentId #对应的 agentid=AGENTID 的值</span><br><span class="line">    |—————— secrect #对应的 corpsecret=SECRET 的值</span><br></pre></td></tr></table></figure>
 <p>记得在应用的设置里，配置可信域名，否则不予跳转。</p>
 <p>如果你的回调域名(redirect_uri)是 <code>www.test.com/auth/wechat</code>，跳转的就是 <code>www.test.com/auth/wechat/?code=CODE&amp;state=STATE</code>，获取CODE的值。</p>
 <ul>
@@ -87,6 +135,9 @@
 <p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.sa.net/2024/05/14/lvKi6QHZb8e2CWD.png" alt="" /></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=ID&amp;corpsecret=SECRET</span><br></pre></td></tr></table></figure>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;errcode&quot;</span><span class="punctuation">:</span><span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;errmsg&quot;</span><span class="punctuation">:</span><span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;access_token&quot;</span><span class="punctuation">:</span> <span class="string">&quot;accesstoken000001&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;expires_in&quot;</span><span class="punctuation">:</span> <span class="number">7200</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<div class="note info flat"><p>不同应用的 agentId、secrect 不同，在新建应用时不能照搬原来构建的授权链接，需要保持一致替换对应的 agentId、secrect，即保持agentId、secrect、由此获得的code、accessToken 的一致性。</p>
+</div>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.sa.net/2024/07/10/3sLdhNziSY7rVUe.png" alt="" /></p>
 <ul>
 <li><strong>根据 code 和 accessToken 获取userId(惟一、可确认用户信息)</strong></li>
 </ul>

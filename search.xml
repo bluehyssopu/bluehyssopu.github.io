@@ -3681,8 +3681,8 @@ alias后面必须要用 “/” 结束，不然会被认为是个文件，而找
       <tags>
         <tag>年度总结</tag>
         <tag>新年祝福</tag>
-        <tag>随笔</tag>
         <tag>2020</tag>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
